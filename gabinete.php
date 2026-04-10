@@ -1,6 +1,7 @@
 <?php 
-$pageTitle = "Gabinete Psicopedagógico NEE | Centro Futura en Rivas Vaciamadrid";
-$pageDescription = "Gabinete especializado en TDAH, Dislexia, TEA y Altas Capacidades en Rivas. Metodología adaptada, evaluación diagnóstica y apoyo familiar.";
+// SEO Dinámico Específico (Actualizado con "Colegiada")
+$pageTitle = "Gabinete Psicopedagógico NEE Rivas | Pedagoga Colegiada";
+$pageDescription = "Gabinete psicopedagógico privado en Rivas Vaciamadrid dirigido por Pedagoga Titulada y Colegiada. Informes oficiales, TDAH, Dislexia, TEA y Altas Capacidades. Plazas 26/27.";
 include 'includes/header.php'; 
 ?>
 
@@ -11,7 +12,7 @@ include 'includes/header.php';
                     <div class="mb-20 stagger-1">
                         <span class="badge badge--purple" style="display: inline-flex; align-items: center; gap: 8px; padding-left: 12px;">
                             <span class="pulse-dot" style="background-color: var(--color-purple); box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.2);" aria-hidden="true"></span>
-                            Gabinete Psicopedagógico NEE
+                            Curso 26/27: Abierto plazo de evaluación
                         </span>
                     </div>
                     <h1 class="hero-premium__title" aria-label="Aprender distinto no es aprender menos. Tu gabinete en Rivas">
@@ -19,12 +20,12 @@ include 'includes/header.php';
                         <span class="title-pill stagger-3" aria-hidden="true" style="border-color: rgba(142, 68, 173, 0.1);">es aprender <span class="text-purple">menos</span></span>
                     </h1>
                     <div class="hero-premium__text-box stagger-4">
-                        <span class="hero-premium__subtitle" style="color: var(--color-purple);">TDAH, DISLEXIA, TEA Y ALTAS CAPACIDADES</span>
+                        <span class="hero-premium__subtitle" style="color: var(--color-purple);">GABINETE PSICOPEDAGÓGICO EN RIVAS</span>
                         <p class="hero-premium__text">
-                            No obligamos al alumno a encajar en el sistema. Entendemos su neurodiversidad y adaptamos nuestra metodología para potenciar su talento real y devolverle la motivación.
+                            No obligamos al alumno a encajar en el sistema. Entendemos su neurodiversidad y adaptamos nuestra metodología para potenciar su talento real con respaldo clínico y oficial.
                         </p>
                         <div class="hero-premium__actions mt-30">
-                            <a href="#onboarding" class="btn-primary btn--small" style="background: linear-gradient(135deg, var(--color-purple), #a259c3); box-shadow: 0 4px 15px rgba(142,68,173,0.3);">Hablemos de tu hijo/a</a>
+                            <a href="#onboarding" class="btn-primary btn--small" style="background: linear-gradient(135deg, var(--color-purple), #a259c3); box-shadow: 0 4px 15px rgba(142,68,173,0.3);">Reservar evaluación inicial</a>
                             <a href="#areas" class="btn-ghost btn--small" style="border-color: var(--color-purple); color: var(--color-purple);">Ver especialidades →</a>
                         </div>
                     </div>
@@ -34,12 +35,12 @@ include 'includes/header.php';
                     <div class="hero-premium__image-wrapper">
                         <div class="hero-premium__bg-shape" style="background: linear-gradient(135deg, rgba(142, 68, 173, 0.4), rgba(192, 132, 252, 0.1));"></div>
                         <picture>
-                            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80" alt="Especialista trabajando con un alumno en Rivas" class="hero-premium__image" style="border-color: #F9F0FF;" fetchpriority="high">
+                            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80" alt="Pedagoga colegiada evaluando a un alumno en Centro Futura Rivas" class="hero-premium__image" style="border-color: #F9F0FF;" fetchpriority="high">
                         </picture>
                         <div class="hero-premium__floating-rating stagger-pop-1" style="bottom: -15px; top: auto; left: -15px; right: auto;">
                             <div class="icon-bg-purple" style="width: 32px; height: 32px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 16px;" aria-hidden="true">🧠</div>
                             <div>
-                                <div style="font-family: var(--font-title); font-weight: 900; font-size: 18px; color: var(--color-navy); line-height: 1;">Enfoque Clínico</div>
+                                <div style="font-family: var(--font-title); font-weight: 800; font-size: 18px; color: var(--color-navy); line-height: 1;">Enfoque Clínico</div>
                                 <div style="font-size: 13px; color: var(--color-text); font-weight: 700;">y Pedagógico</div>
                             </div>
                         </div>
@@ -47,6 +48,32 @@ include 'includes/header.php';
                 </div>
             </div>
         </section>
+
+        <div class="page-wrapper reveal" style="margin-top: -30px; position: relative; z-index: 20;">
+            <div class="pricing-bridge glass-effect" style="background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(142,68,173,0.2); border-radius: var(--radius-lg); padding: 30px 40px; box-shadow: var(--shadow-md); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="font-size: 32px;" aria-hidden="true">🎓</div>
+                    <div>
+                        <h4 style="font-family: var(--font-title); font-size: 16px; font-weight: 800; color: var(--color-navy); margin-bottom: 2px;">Dirección Colegiada</h4>
+                        <p style="font-size: 13px; color: var(--color-text); margin: 0;">Gabinete dirigido por Pedagoga Titulada y Colegiada Oficial.</p>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="font-size: 32px;" aria-hidden="true">📜</div>
+                    <div>
+                        <h4 style="font-family: var(--font-title); font-size: 16px; font-weight: 800; color: var(--color-navy); margin-bottom: 2px;">Validez Oficial</h4>
+                        <p style="font-size: 13px; color: var(--color-text); margin: 0;">Informes válidos para centros escolares y solicitud de becas NEE.</p>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="font-size: 32px;" aria-hidden="true">🔒</div>
+                    <div>
+                        <h4 style="font-family: var(--font-title); font-size: 16px; font-weight: 800; color: var(--color-navy); margin-bottom: 2px;">Atención Privada</h4>
+                        <p style="font-size: 13px; color: var(--color-text); margin: 0;">Cero listas de espera. Intervención inmediata y 100% personalizada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="page-wrapper">
             <div id="areas" class="content-island content-island--nee reveal">
@@ -159,16 +186,16 @@ include 'includes/header.php';
                 <section class="island-section">
                     <div class="text-center mb-50">
                         <span class="badge badge--purple mb-15">TU EQUIPO ALIADO</span>
-                        <h2 class="section-title">Detrás del método, <br><span class="text-purple">hay personas</span></h2>
-                        <p class="section-description mx-auto max-w-800">No derivamos a tu hijo/a a desconocidos. Contamos con un equipo estable de psicopedagogos, neuroeducadores y maestros especialistas.</p>
+                        <h2 class="section-title">Detrás del método, <br><span class="text-purple">hay profesionales colegiados</span></h2>
+                        <p class="section-description mx-auto max-w-800">Garantizamos una intervención clínica y educativa de máxima calidad. No derivamos a tu hijo/a a desconocidos ni a personal sin titulación oficial.</p>
                     </div>
 
                     <div class="team-grid">
-                        <div class="team-card glass-effect text-center">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Elena Martínez" class="team-avatar">
+                        <div class="team-card glass-effect text-center" style="border-top: 4px solid var(--color-purple);">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Elena Martínez, Pedagoga Colegiada" class="team-avatar">
                             <h4 class="team-name">Elena Martínez</h4>
-                            <p class="team-role">Directora Psicopedagógica</p>
-                            <p class="team-desc">Especialista en intervención en TDAH y funciones ejecutivas con más de 10 años de experiencia clínica y educativa.</p>
+                            <p class="team-role">Directora | Pedagoga Colegiada</p>
+                            <p class="team-desc">Pedagoga Titulada y Colegiada Oficial. Especialista en evaluación e intervención clínica en TDAH y funciones ejecutivas con más de 10 años de experiencia.</p>
                         </div>
                         <div class="team-card glass-effect text-center">
                             <img src="https://images.unsplash.com/photo-1580894732444-8ecded790047?auto=format&fit=crop&w=400&q=80" alt="Carlos Ruiz" class="team-avatar">
@@ -189,9 +216,9 @@ include 'includes/header.php';
             <div id="diagnostico" class="content-island content-island--dark reveal" style="background-color: var(--color-navy); padding-top: 100px; padding-bottom: 100px;">
                 <section class="island-section">
                     <div class="text-center mb-60">
-                        <span class="badge badge--purple mb-15">EVALUACIÓN CLÍNICA</span>
+                        <span class="badge badge--purple mb-15">EVALUACIÓN OFICIAL</span>
                         <h2 class="section-title" style="color: white;">El camino hacia la <br><span class="text-purple">claridad y la calma</span></h2>
-                        <p class="section-description mx-auto max-w-800" style="color: #b8b8c5;">Nuestro Diagnóstico Psicopedagógico es un proceso riguroso y transparente de 10 pasos, agrupados en 4 grandes fases para que sepáis exactamente en qué punto estamos en cada momento.</p>
+                        <p class="section-description mx-auto max-w-800" style="color: #b8b8c5;">Nuestro Diagnóstico Psicopedagógico es un proceso riguroso y transparente, firmado por una profesional colegiada, válido para trámites escolares y becas.</p>
                     </div>
 
                     <ol class="steps-grid" role="list" style="list-style: none; padding: 0; margin: 0; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
@@ -203,12 +230,12 @@ include 'includes/header.php';
                         <li class="step-card" style="background: rgba(255,255,255,0.03); border-top-color: var(--color-purple); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(10px); padding: 40px 30px; text-align: left; display: flex; flex-direction: column; height: 100%;">
                             <div class="step-number" style="background: var(--color-purple); width: 40px; height: 40px; font-size: 16px; top: -20px; left: 30px; transform: none;" aria-hidden="true">2</div>
                             <h3 style="color: white; font-size: 20px; margin-bottom: 15px;">Evaluación Clínica</h3>
-                            <p style="color: #b8b8c5; font-size: 15px; line-height: 1.6; margin-bottom: 15px; flex-grow: 1;">Pasamos a la acción con sensibilidad. Seleccionamos las herramientas y aplicamos las pruebas, adaptándonos al ritmo y estado emocional del alumno/a.</p>
+                            <p style="color: #b8b8c5; font-size: 15px; line-height: 1.6; margin-bottom: 15px; flex-grow: 1;">Pasamos a la acción con sensibilidad. Seleccionamos las herramientas y aplicamos las pruebas baremadas oficialmente, adaptándonos al estado emocional del alumno.</p>
                         </li>
                         <li class="step-card" style="background: rgba(255,255,255,0.03); border-top-color: var(--color-purple); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(10px); padding: 40px 30px; text-align: left; display: flex; flex-direction: column; height: 100%;">
                             <div class="step-number" style="background: var(--color-purple); width: 40px; height: 40px; font-size: 16px; top: -20px; left: 30px; transform: none;" aria-hidden="true">3</div>
-                            <h3 style="color: white; font-size: 20px; margin-bottom: 15px;">Análisis e Informe</h3>
-                            <p style="color: #b8b8c5; font-size: 15px; line-height: 1.6; margin-bottom: 15px; flex-grow: 1;">Trabajo interno del equipo clínico. Integramos todos los datos para trazar su perfil neurocognitivo y elaboramos el documento oficial final.</p>
+                            <h3 style="color: white; font-size: 20px; margin-bottom: 15px;">Análisis e Informe Oficial</h3>
+                            <p style="color: #b8b8c5; font-size: 15px; line-height: 1.6; margin-bottom: 15px; flex-grow: 1;">Integramos todos los datos para trazar su perfil neurocognitivo y elaboramos el documento oficial final, firmado y sellado por el gabinete.</p>
                         </li>
                         <li class="step-card" style="background: rgba(255,255,255,0.03); border-top-color: var(--color-purple); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(10px); padding: 40px 30px; text-align: left; display: flex; flex-direction: column; height: 100%;">
                             <div class="step-number" style="background: var(--color-purple); width: 40px; height: 40px; font-size: 16px; top: -20px; left: 30px; transform: none;" aria-hidden="true">4</div>
@@ -222,7 +249,7 @@ include 'includes/header.php';
             <div id="onboarding" class="content-island reveal" style="border-color: rgba(142,68,173,0.2);">
                 <section class="island-section">
                     <div class="text-center mb-50">
-                        <span class="badge badge--orange mb-15">CÓMO EMPEZAR</span>
+                        <span class="badge badge--orange mb-15">CURSO 26/27</span>
                         <h2 class="section-title">Dar el primer paso es <br><span class="text-orange">así de sencillo</span></h2>
                         <p class="section-description mx-auto max-w-800">Sabemos que buscar ayuda puede generar dudas. Hemos diseñado un proceso de entrada transparente, sin presiones y orientado a escucharos primero.</p>
                     </div>
@@ -241,7 +268,7 @@ include 'includes/header.php';
                         <div class="onboarding-step">
                             <div class="onboarding-icon icon-bg-green" aria-hidden="true">🚀</div>
                             <h4>3. Plan de Intervención</h4>
-                            <p>Tras el diagnóstico, os presentamos la hoja de ruta, asignamos al especialista ideal y empezamos a trabajar sin permanencias ocultas.</p>
+                            <p>Tras el diagnóstico oficial, os presentamos la hoja de ruta, asignamos al especialista ideal y aseguramos vuestra plaza.</p>
                         </div>
                     </div>
                     
@@ -305,7 +332,17 @@ include 'includes/header.php';
                         
                         <details class="faq-item">
                             <summary class="faq-question">¿Cuál es la diferencia entre el Apoyo Escolar normal y el Gabinete NEE?</summary>
-                            <div class="faq-answer">Mientras que el apoyo escolar se centra en dominar el contenido de las asignaturas, el Gabinete NEE se centra en <strong>cómo aprende el cerebro del alumno</strong>. Entrenamos las funciones ejecutivas, la memoria de trabajo y la organización espacial.</div>
+                            <div class="faq-answer">Mientras que el apoyo escolar se centra en dominar el contenido de las asignaturas, el Gabinete NEE (dirigido por nuestra pedagoga colegiada) se centra en <strong>cómo aprende el cerebro del alumno</strong>. Entrenamos las funciones ejecutivas, la memoria de trabajo y la organización espacial.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">¿Quién realiza las evaluaciones y terapias?</summary>
+                            <div class="faq-answer">Todas las evaluaciones y la supervisión de las intervenciones son dirigidas por nuestra <strong>Pedagoga Titulada y Colegiada</strong>, garantizando un enfoque científico, clínico y ético en el trato de las necesidades educativas de tu hijo/a.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">¿Los informes psicopedagógicos de Centro Futura tienen validez oficial?</summary>
+                            <div class="faq-answer">Sí. Al estar firmados por una profesional colegiada en activo, nuestros informes diagnósticos tienen total <strong>validez oficial</strong> para presentarlos en centros educativos (colegios e institutos), orientadores y para la solicitud de becas o ayudas por Necesidades Educativas Especiales (NEE).</div>
                         </details>
                     </div>
                 </section>
@@ -313,8 +350,8 @@ include 'includes/header.php';
 
             <div class="cta-banner reveal mt-60 mb-40" style="background: linear-gradient(135deg, var(--color-purple), #a259c3); box-shadow: 0 20px 40px rgba(142,68,173,0.2);">
                 <div class="cta-banner__content">
-                    <h2 style="font-family: var(--font-title); font-size: 32px; color: var(--color-white); font-weight: 900; margin-bottom: 15px;">Estamos aquí para escucharos</h2>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Solicita una llamada inicial sin compromiso. Hablaremos de vuestra situación, analizaremos las barreras actuales y diseñaremos un plan de acción conjunto.</p>
+                    <h2 style="font-family: var(--font-title); font-size: 32px; color: var(--color-white); font-weight: 900; margin-bottom: 15px;">Asegura tu plaza para el curso 26/27</h2>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Nuestro Gabinete en Rivas es un servicio privado y altamente demandado. Solicita una llamada inicial sin compromiso y diseñaremos un plan de acción conjunto.</p>
                     <a href="contacto.php" class="btn-primary" style="background: var(--color-white); color: var(--color-purple); box-shadow: 0 10px 20px rgba(0,0,0,0.15);">Cuéntanos vuestro caso</a>
                 </div>
             </div>
