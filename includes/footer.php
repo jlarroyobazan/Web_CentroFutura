@@ -105,6 +105,7 @@
             document.querySelectorAll(".counter-number").forEach(c => counterObserver.observe(c));
         });
     </script>
+    
     <button id="reopenCookiesBtn" class="cookie-reopen-btn" aria-label="Configurar Cookies" style="display: none;">⚙️</button>
 
     <div id="cookieBanner" class="cookie-banner-wrapper" role="dialog" aria-labelledby="cookieTitle">
@@ -131,7 +132,7 @@
                         <p>Imprescindibles para que la web funcione correctamente (seguridad, sesión).</p>
                     </div>
                     <label class="switch">
-                        <input type="checkbox" checked disabled>
+                        <input type="checkbox" checked disabled aria-label="Cookies necesarias, siempre activas">
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -141,7 +142,7 @@
                         <p>Nos permiten medir de forma anónima las visitas para mejorar la web (Google Analytics).</p>
                     </div>
                     <label class="switch">
-                        <input type="checkbox" id="toggleAnalytics">
+                        <input type="checkbox" id="toggleAnalytics" aria-label="Activar cookies de análisis">
                         <span class="slider"></span>
                     </label>
                 </div>
