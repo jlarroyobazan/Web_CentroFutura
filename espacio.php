@@ -40,7 +40,7 @@ include 'includes/header.php';
                     <div class="text-center mb-60">
                         <span class="badge badge--orange mb-15">DISEÑO CON PROPÓSITO</span>
                         <h2 class="section-title">Detalles que marcan <br>la <span class="text-orange">diferencia cognitiva</span></h2>
-                        <p class="section-description mx-auto max-w-800">Para un alumno con TDAH, dislexia o ansiedad ante los exámenes, un estímulo innecesario puede agotar su energía. Nuestro espacio está pensado como una burbuja de enfoque.</p>
+                        <p class="section-description mx-auto max-w-800">Para un alumno con TDAH, dislexia o ansiedad ante los exámenes, un estímulo innecesario puede agotar su energía. Nuestro espacio está pensado como una burbuja de enfoque absoluto.</p>
                     </div>
 
                     <div class="features-split__grid" role="list">
@@ -68,13 +68,30 @@ include 'includes/header.php';
                 </section>
             </div>
 
+            <div class="content-island content-island--dark reveal" style="background-color: var(--color-navy); padding-top: 80px; padding-bottom: 80px;">
+                <section class="island-section text-center">
+                    <span class="badge badge--orange mb-15">ACCESIBILIDAD Y ENTORNO</span>
+                    <h2 class="section-title mb-20" style="color: var(--color-white);">Ubicación privilegiada en <br><span class="text-orange">Rivas Futura</span></h2>
+                    <div class="mx-auto max-w-800 text-left mt-40" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 40px; border-radius: var(--radius-lg); backdrop-filter: blur(10px);">
+                        <p style="color: #b8b8c5; font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
+                            Sabemos que la logística familiar de las tardes es complicada. Por eso, nuestro centro de apoyo escolar y gabinete está estratégicamente situado en la <strong>Avenida Pablo Iglesias 89</strong>, una de las zonas más accesibles, modernas y seguras de Rivas Vaciamadrid.
+                        </p>
+                        <ul style="color: #b8b8c5; font-size: 16px; line-height: 1.7; margin-bottom: 0; padding-left: 20px;">
+                            <li style="margin-bottom: 12px;"><strong style="color: var(--color-white);">Accesibilidad total:</strong> Local a pie de calle, sin barreras arquitectónicas, 100% adaptado y amable para personas con movilidad reducida o carritos.</li>
+                            <li style="margin-bottom: 12px;"><strong style="color: var(--color-white);">Comodidad para familias:</strong> Zona residencial con amplias facilidades de aparcamiento para dejar y recoger a los alumnos sin estrés ni prisas.</li>
+                            <li><strong style="color: var(--color-white);">Entorno seguro:</strong> A escasos minutos del Metro Rivas Futura y rodeado de amplias zonas peatonales seguras para los adolescentes.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
             <div id="galeria" class="content-island reveal">
                 <section class="island-section">
                     <div class="features-split" style="margin-bottom: 60px;">
                         <div class="features-split__info">
                             <span class="badge badge--purple mb-15">NUESTRO CENTRO</span>
-                            <h2 class="section-title">Un paseo por <br><span class="text-purple">Futura</span></h2>
-                            <p class="section-description mb-30">Desde la zona de espera diseñada para la tranquilidad de las familias, hasta las salas del gabinete clínico equipadas con material manipulativo neuroeducativo de última generación.</p>
+                            <h2 class="section-title text-left">Un paseo por <br><span class="text-purple">Futura</span></h2>
+                            <p class="section-description mb-30 text-left">Desde la zona de espera diseñada para la tranquilidad de las familias, hasta las salas del gabinete clínico equipadas con material manipulativo neuroeducativo de última generación.</p>
                         </div>
                         <div class="features-split__visual text-right">
                             <div class="hero-premium__trust" style="justify-content: flex-end;">
