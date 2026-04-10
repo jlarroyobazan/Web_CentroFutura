@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#F5F5F7">
     <title><?php echo $pageTitle ?? 'Academia Centro Futura | Apoyo Escolar y NEE en Rivas Vaciamadrid'; ?></title>
     <meta name="description" content="<?php echo $pageDescription ?? 'Especialistas en apoyo escolar, gabinete psicopedagógico (TDAH, Dislexia) y técnicas de estudio en Rivas Vaciamadrid.'; ?>">
@@ -70,6 +70,28 @@
       }
     }
     </script>
+
+    <style>
+        .mobile-menu-btn { display: none; background: transparent; border: none; cursor: pointer; padding: 5px; }
+        @media (max-width: 950px) {
+            .mobile-menu-btn { display: block; }
+            .main-nav.nav-open {
+                display: flex !important;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(245, 245, 247, 0.98);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+            }
+            .header-inner { position: relative; }
+        }
+    </style>
 </head>
 <body>
 
@@ -78,10 +100,11 @@
     <header class="site-header">
         <div class="header-inner">
             <div class="logo">
-                <a href="index.php" style="text-decoration: none;">
-                    <span class="text-orange" style="font-family: var(--font-title); font-weight: 900; font-size: 24px;">Centro Futura</span>
+                <a href="index.php" style="text-decoration: none; display: flex; align-items: center;">
+                    <span class="text-orange" style="font-family: var(--font-title); font-weight: 800; font-size: 24px; letter-spacing: -0.02em;">Centro Futura</span>
                 </a>
             </div>
+            
             <nav class="main-nav" aria-label="Navegación principal">
                 <a href="index.php">Inicio</a>
                 <div class="nav-dropdown">
@@ -97,6 +120,40 @@
                 <a href="blog.php">Blog educativo</a>
                 <a href="contacto.php">Hablemos</a>
             </nav>
+
             <a href="solicitud.php" class="btn-primary btn--small" style="margin-left: 20px;">Solicitar plaza</a>
+
+            <button class="mobile-menu-btn" aria-label="Abrir menú móvil" aria-expanded="false">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
     </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Lógica de la Barra de Progreso de Lectura
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                const progressBar = document.getElementById('scrollProgress');
+                if(progressBar) progressBar.style.width = scrolled + '%';
+            });
+
+            // 2. Lógica del Menú Móvil
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if(mobileBtn && mainNav) {
+                mobileBtn.addEventListener('click', () => {
+                    const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+                    mobileBtn.setAttribute('aria-expanded', !expanded);
+                    mainNav.classList.toggle('nav-open');
+                });
+            }
+        });
+    </script>
