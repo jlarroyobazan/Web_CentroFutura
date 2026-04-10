@@ -34,7 +34,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly">Aprox. 12,50€ / sesión</div>
                                 <p class="pricing-desc">Refuerzo puntual para resolver dudas, revisar deberes y reforzar una asignatura.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar plaza</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card">
@@ -45,7 +45,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly">Aprox. 10,00€ / sesión</div>
                                 <p class="pricing-desc">Apoyo semanal para reforzar contenidos, mejorar hábitos de estudio y preparar exámenes.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar plaza</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card card-featured border-orange">
@@ -57,7 +57,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly">Aprox. 9,15€ / sesión</div>
                                 <p class="pricing-desc">Refuerzo continuo en varias materias con seguimiento del progreso académico.</p>
-                                <a href="index.php#contacto" class="btn-primary mt-10" style="margin-top: auto; width: 100%; text-align: center;">Elegir plan</a>
+                                <a href="index.php#contacto" class="btn-primary mt-10" style="margin-top: auto; width: 100%; text-align: center;">Quiero este plan</a>
                             </div>
 
                             <div class="pricing-card card-featured border-orange">
@@ -69,7 +69,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly">Aprox. 8,75€ / sesión</div>
                                 <p class="pricing-desc">Apoyo más completo para mejorar resultados y consolidar las asignaturas principales.</p>
-                                <a href="index.php#contacto" class="btn-primary mt-10" style="margin-top: auto; width: 100%; text-align: center;">Elegir plan</a>
+                                <a href="index.php#contacto" class="btn-primary mt-10" style="margin-top: auto; width: 100%; text-align: center;">Quiero este plan</a>
                             </div>
 
                             <div class="pricing-card">
@@ -80,7 +80,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly">Aprox. 8,50€ / sesión</div>
                                 <p class="pricing-desc">Programa intensivo para alumnos que necesitan reforzar varias materias cada semana.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar plaza</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card">
@@ -91,7 +91,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly text-orange" style="font-weight: 700;">Aprox. 8,33€ / sesión • Mayor ahorro</div>
                                 <p class="pricing-desc">Refuerzo académico intensivo con preparación de exámenes y apoyo constante.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar plaza</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card">
@@ -102,7 +102,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly text-orange" style="font-weight: 700;">Aprox. 8,20€ / sesión • Mayor ahorro</div>
                                 <p class="pricing-desc">Apoyo semanal avanzado para mejorar rendimiento y recuperar asignaturas pendientes.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar plaza</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card">
@@ -113,7 +113,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly text-orange" style="font-weight: 700;">Aprox. 8,12€ / sesión • Mejor precio</div>
                                 <p class="pricing-desc">Plan completo de refuerzo para alumnos que necesitan apoyo académico continuo.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar plaza</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card" style="background: var(--bg-icon-blue); border-color: transparent;">
@@ -146,7 +146,7 @@ include 'includes/header.php';
                     </div>
 
                     <div id="tab-gabinete" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-gabinete">
-                        <div class="pricing-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin: 0 auto;">
+                        <div class="pricing-grid">
                             
                             <div class="pricing-card">
                                 <span class="pricing-category-label text-purple">Paso 1</span>
@@ -260,6 +260,15 @@ include 'includes/header.php';
                     <details class="faq-item">
                         <summary class="faq-question">Si mi hijo falta por enfermedad, ¿pierde el dinero de esa clase?</summary>
                         <div class="faq-answer">No. Entendemos que los imprevistos médicos ocurren. Si se avisa con antelación, ofrecemos flexibilidad para recuperar esa clase en otro horario disponible durante la misma semana.</div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Por qué elegir un psicopedagogo en Rivas Vaciamadrid?</summary>
+                        <div class="faq-answer">Al estar ubicados en <strong>Rivas Futura</strong>, conocemos de cerca el entorno educativo local. Nuestro servicio de <strong>Gabinete Psicopedagógico</strong> (con especialistas en TDAH, Dislexia y TEA) está integrado con el apoyo escolar, ofreciendo una intervención completa sin tener que desplazarse a Madrid centro.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Qué incluye el bono de Apoyo Escolar en Rivas?</summary>
+                        <div class="faq-answer">Nuestros precios de <strong>apoyo escolar en Rivas</strong> incluyen clases en grupos reducidos (máximo 6 alumnos), material de estudio propio, enseñanza de técnicas de estudio y tutorías regulares con los padres para asegurar el avance del alumno.</div>
                     </details>
                 </section>
             </div>
