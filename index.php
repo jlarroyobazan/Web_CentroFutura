@@ -39,11 +39,11 @@ include 'includes/header.php';
                                     <div>⭐</div>
                                 </div>
                                 <div style="display: flex; flex-direction: column;">
-                                    <span style="font-family: var(--font-title); font-size: 15px; font-weight: 900; color: var(--color-navy); line-height: 1.2;">+95% aprobados</span>
+                                    <span style="font-family: var(--font-title); font-size: 15px; font-weight: 800; color: var(--color-navy); line-height: 1.2;">+95% aprobados</span>
                                     <span style="font-size: 12px; font-weight: 500; color: var(--color-text);">Método comprobado</span>
                                 </div>
                             </div>
-                            <a href="#metodologia" class="btn-ghost btn--small">Descubrir método →</a>
+                            <a href="#metodologia" class="btn-ghost btn--small">Ver cómo lo logramos →</a>
                         </div>
                     </div>
                 </div>
@@ -60,14 +60,14 @@ include 'includes/header.php';
                         <div class="hero-premium__floating-rating stagger-pop-1">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Logotipo de opiniones de Google" width="28" height="28">
                             <div>
-                                <div style="font-family: var(--font-title); font-weight: 900; font-size: 20px; color: var(--color-navy); line-height: 1;" aria-label="4.9 estrellas de 5">4.9/5</div>
+                                <div style="font-family: var(--font-title); font-weight: 800; font-size: 20px; color: var(--color-navy); line-height: 1;" aria-label="4.9 estrellas de 5">4.9/5</div>
                                 <div style="font-size: 13px; color: var(--color-text); font-weight: 700;">80 opiniones</div>
                             </div>
                         </div>
 
                         <a href="#contacto" class="btn-cta-floating stagger-pop-2">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                            Solicitar plaza
+                            Clase de prueba gratis
                         </a>
                     </div>
                 </div>
@@ -156,6 +156,16 @@ include 'includes/header.php';
                             <div class="step-number" aria-hidden="true">3</div>
                             <h3>Éxito Académico</h3>
                             <p>Acompañamos continuamente, enseñamos técnicas de estudio y celebramos cada aprobado juntos.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="island-section mt-80 reveal">
+                    <div class="cta-banner">
+                        <div class="cta-banner__content">
+                            <h2 style="font-family: var(--font-title); font-size: 36px; font-weight: 800; color: white; margin-bottom: 15px;">¿Las tardes de deberes son una batalla?</h2>
+                            <p style="font-size: 18px; color: rgba(255,255,255,0.9); margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Recupera la paz familiar. Déjanos evaluar el caso de tu hijo sin compromiso y diseñaremos un plan a su medida para que vuelva a confiar en sí mismo.</p>
+                            <a href="#contacto" class="btn-primary" style="background: white; color: var(--color-orange); box-shadow: 0 10px 25px rgba(0,0,0,0.1);">Hablar con un orientador hoy</a>
                         </div>
                     </div>
                 </section>
@@ -266,7 +276,7 @@ include 'includes/header.php';
 
                     <div class="nee-protocol mt-80">
                         <div class="text-center mb-50">
-                            <h3 style="font-family: var(--font-title); font-size: 32px; color: var(--color-navy); font-weight: 900;">El Triángulo del Éxito <span class="text-purple">Futura</span></h3>
+                            <h3 style="font-family: var(--font-title); font-size: 32px; color: var(--color-navy); font-weight: 800;">El Triángulo del Éxito <span class="text-purple">Futura</span></h3>
                             <p class="section-description mt-10">Nuestro protocolo de intervención integral garantiza resultados porque involucramos a todas las partes vitales en el desarrollo del alumno.</p>
                         </div>
                         <div class="protocol-grid">
@@ -375,11 +385,17 @@ include 'includes/header.php';
                         </a>
                     </div>
                 </section>
-            </div>
-
-            <div class="content-island content-island--light reveal">
                 
-                <section id="faq" class="faq island-section">
+                <section class="seo-block island-section mt-80 pt-50 reveal" style="border-top: 1px solid rgba(0,0,0,0.05);">
+                    <div class="max-w-800 mx-auto text-center">
+                        <h2 class="section-title" style="font-size: 28px;">Referentes en <span class="text-orange">Apoyo Escolar en Rivas Vaciamadrid</span></h2>
+                        <p class="section-description" style="font-size: 16px; margin-bottom: 20px;">En Centro Futura llevamos más de 13 años demostrando que una educación a medida es la clave del éxito. Nuestra academia en Rivas Futura no es un centro de estudios convencional; es un espacio donde el rendimiento académico y el bienestar emocional van de la mano.</p>
+                        <h3 style="font-family: var(--font-title); font-size: 20px; font-weight: 800; color: var(--color-navy); margin-bottom: 15px;">Gabinete Psicopedagógico Integrado</h3>
+                        <p style="font-size: 16px; color: var(--color-text); line-height: 1.6;">A diferencia de otras academias, contamos con un <strong>gabinete psicopedagógico especializado</strong> para atender necesidades específicas como TDAH, Dislexia, TEA o Altas Capacidades. Diseñamos planes de intervención únicos que transforman la forma en que tu hijo percibe el aprendizaje.</p>
+                    </div>
+                </section>
+
+                <section id="faq" class="faq island-section mt-80">
                     <div class="faq-container">
                         <h2 class="section-title text-center mb-50">Preguntas Frecuentes</h2>
                         
@@ -425,7 +441,7 @@ include 'includes/header.php';
                         <div class="contact-info-panel">
                             <span class="badge badge--orange mb-15">DA EL PRIMER PASO</span>
                             <h2 class="section-title">Asegura el éxito <br>de tu hijo <span class="text-orange">hoy</span></h2>
-                            <p class="section-description mb-40">Rellena el formulario y un especialista educativo te contactará en menos de 24h para asesorarte y agendar una <strong>clase de prueba gratuita</strong>.</p>
+                            <p class="section-description mb-40">Rellena el formulario y una especialista educativa te contactará en menos de 24h para asesorarte y agendar una <strong>clase de prueba gratuita y sin compromiso</strong>.</p>
             
                             <div class="contact-perks">
                                 <div class="perk-card">
@@ -459,7 +475,7 @@ include 'includes/header.php';
                                 <form class="real-form" action="#" method="POST">
                                     <div class="input-group floating-label-group">
                                         <input type="text" id="nombre" name="nombre" placeholder=" " required autocomplete="name" aria-required="true">
-                                        <label for="nombre">Nombre del tutor</label>
+                                        <label for="nombre">Nombre del tutor/a</label>
                                     </div>
                                     
                                     <div class="input-group floating-label-group">
@@ -480,7 +496,7 @@ include 'includes/header.php';
                                     </div>
             
                                     <button type="submit" class="btn-primary btn-submit mt-10">
-                                        Solicitar clase de prueba
+                                        Reservar clase gratis
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </button>
                                     <p class="form-disclaimer">Al enviar, aceptas nuestra <a href="politica-de-privacidad.php" target="_blank">política de privacidad</a>. No enviamos spam.</p>
