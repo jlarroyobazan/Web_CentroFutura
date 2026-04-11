@@ -1,4 +1,7 @@
 <?php 
+// 🛠️ RUTA BASE DINÁMICA: Seguridad arquitectónica
+if (!isset($base_url)) { $base_url = '/'; }
+
 // SEO Dinámico para la página legal
 $pageTitle = "Condiciones Generales - Centro Futura | Rivas Vaciamadrid";
 $pageDescription = "Estatuto Jurídico, Reglamento Interno y Términos de Contratación de los servicios educativos y psicopedagógicos de Centro Futura.";
@@ -7,19 +10,66 @@ $pageDescription = "Estatuto Jurídico, Reglamento Interno y Términos de Contra
 include 'includes/header.php'; 
 ?>
 
-<main class="page-wrapper legal-page-wrapper">
+<style>
+    /* Tipografía Premium para Textos Legales (Mejora de Legibilidad UX) */
+    .legal-text p {
+        font-size: 17px;
+        line-height: 1.8;
+        color: #333336;
+        margin-bottom: 20px;
+    }
+    .legal-text strong {
+        color: var(--color-navy);
+        font-weight: 800;
+    }
+    
+    /* Encabezados de sección numerados */
+    .legal-header-flex {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        padding-bottom: 15px;
+    }
+    
+    .legal-title {
+        font-family: var(--font-title);
+        font-size: 24px;
+        color: var(--color-navy);
+        margin: 0;
+        font-weight: 900;
+    }
+
+    /* Efecto interactivo para las tarjetas de datos */
+    .legal-mini-card {
+        background: var(--bg-body);
+        border: 1px solid rgba(0,0,0,0.04);
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        margin: 0 !important; /* Sobreescribe el margen por defecto de content-island */
+    }
+    .legal-mini-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-sm);
+        background: var(--color-white);
+    }
+</style>
+
+<main class="page-wrapper legal-page-wrapper mt-40">
     
     <header class="text-center mb-50 reveal">
         <span class="badge badge--orange mb-15">ESTATUTO JURÍDICO Y REGLAMENTO INTERNO</span>
         <h1 class="section-title">Condiciones <span class="text-orange">Generales</span></h1>
-        <p class="section-description mx-auto mt-10">Marco Legal de Prestación de Servicios Educativos • Edición 2026</p>
+        <p class="section-description mx-auto max-w-600 mt-10">Marco Legal de Prestación de Servicios Educativos • Edición <?php echo date('Y'); ?></p>
     </header>
 
-    <div class="legal-content">
+    <div class="legal-content mx-auto" style="max-width: 900px;">
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="legal-badge-orange">01</span>
+                <span class="badge badge--orange" style="padding: 6px 12px; font-size: 16px;">01</span>
                 <h2 class="legal-title">Régimen Económico y Contractual</h2>
             </div>
             <div class="legal-text">
@@ -31,7 +81,7 @@ include 'includes/header.php';
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="legal-badge-dark">02</span>
+                <span class="badge badge--blue" style="padding: 6px 12px; font-size: 16px; background: var(--color-navy); color: white;">02</span>
                 <h2 class="legal-title">Protocolo de Bajas y Desistimiento</h2>
             </div>
             <div class="legal-text">
@@ -40,9 +90,9 @@ include 'includes/header.php';
             </div>
         </section>
 
-        <section class="content-island legal-island island-border-orange reveal">
+        <section class="content-island legal-island reveal" style="border-top: 4px solid var(--color-orange);">
             <div class="legal-header-flex">
-                <span class="legal-badge-orange">03</span>
+                <span class="badge badge--orange" style="padding: 6px 12px; font-size: 16px;">03</span>
                 <h2 class="legal-title">Cláusula de Continuidad Digital</h2>
             </div>
             <div class="legal-text">
@@ -52,7 +102,7 @@ include 'includes/header.php';
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="legal-badge-dark">04</span>
+                <span class="badge badge--blue" style="padding: 6px 12px; font-size: 16px; background: var(--color-navy); color: white;">04</span>
                 <h2 class="legal-title">Alcance de la Responsabilidad Pedagógica</h2>
             </div>
             <div class="legal-text">
@@ -60,9 +110,9 @@ include 'includes/header.php';
             </div>
         </section>
 
-        <section class="content-island legal-island island-border-red reveal">
+        <section class="content-island legal-island reveal" style="border-top: 4px solid #e74c3c;">
             <div class="legal-header-flex">
-                <span class="legal-badge-red">05</span>
+                <span class="badge badge--orange" style="padding: 6px 12px; font-size: 16px; background: #e74c3c; color: white;">05</span>
                 <h2 class="legal-title">Régimen Disciplinario y Admisión</h2>
             </div>
             <div class="legal-text">
@@ -73,7 +123,7 @@ include 'includes/header.php';
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="legal-badge-orange">06</span>
+                <span class="badge badge--orange" style="padding: 6px 12px; font-size: 16px;">06</span>
                 <h2 class="legal-title">Propiedad Intelectual y Exclusividad</h2>
             </div>
             <div class="legal-text">
@@ -84,7 +134,7 @@ include 'includes/header.php';
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="legal-badge-dark">07</span>
+                <span class="badge badge--blue" style="padding: 6px 12px; font-size: 16px; background: var(--color-navy); color: white;">07</span>
                 <h2 class="legal-title">Protocolo de Seguridad y Recogida</h2>
             </div>
             <div class="legal-text">
@@ -92,28 +142,30 @@ include 'includes/header.php';
             </div>
         </section>
 
-        <section class="legal-grid reveal">
-            <div class="content-island legal-island legal-mini-card" style="margin-bottom: 0;">
-                <h3 class="text-orange">08. Uso de Imagen</h3>
-                <p class="legal-text" style="font-size: 0.9rem;">Se autoriza al centro a utilizar material audiovisual donde aparezca el alumno (fotos de proyectos, vídeos de actividades) para la comunicación interna y promoción en redes sociales corporativas, velando siempre por la protección del menor y su integridad.</p>
-            </div>
-            <div class="content-island legal-island legal-mini-card" style="margin-bottom: 0;">
-                <h3>09. Instalaciones</h3>
-                <p class="legal-text" style="font-size: 0.9rem;">Los alumnos deben hacer un uso diligente del mobiliario y los equipos informáticos. Cualquier daño derivado de un uso indebido o negligente será responsabilidad del tutor legal, quien deberá sufragar el coste íntegro de la reparación o reposición.</p>
-            </div>
-            <div class="content-island legal-island legal-mini-card" style="margin-bottom: 0;">
-                <h3>10. Canales de Atención</h3>
-                <p class="legal-text" style="font-size: 0.9rem;">Toda gestión académica o administrativa se canalizará vía email o el WhatsApp oficial del centro en horario de atención al público. Se ruega respetar el descanso del personal fuera de dicho horario, garantizando así la desconexión digital de los docentes.</p>
-            </div>
-            <div class="content-island legal-island legal-mini-card" style="margin-bottom: 0;">
-                <h3>11. Objetos de Valor</h3>
-                <p class="legal-text" style="font-size: 0.9rem;">Centro Futura recomienda no acudir al centro con objetos de valor excesivo. El centro declina toda responsabilidad por la pérdida, extravío o deterioro fortuito de dispositivos electrónicos personales, dinero o prendas de ropa del alumnado.</p>
+        <section class="reveal mt-40 mb-40">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div class="content-island legal-island legal-mini-card">
+                    <h3 style="font-family: var(--font-title); font-size: 18px; color: var(--color-orange); margin-bottom: 10px; font-weight: 800;">08. Uso de Imagen</h3>
+                    <p class="legal-text" style="font-size: 0.95rem; margin: 0; line-height: 1.6;">Se autoriza al centro a utilizar material audiovisual donde aparezca el alumno (fotos de proyectos, vídeos de actividades) para la comunicación interna y promoción en redes sociales corporativas, velando siempre por la protección del menor y su integridad.</p>
+                </div>
+                <div class="content-island legal-island legal-mini-card">
+                    <h3 style="font-family: var(--font-title); font-size: 18px; color: var(--color-navy); margin-bottom: 10px; font-weight: 800;">09. Instalaciones</h3>
+                    <p class="legal-text" style="font-size: 0.95rem; margin: 0; line-height: 1.6;">Los alumnos deben hacer un uso diligente del mobiliario y los equipos informáticos. Cualquier daño derivado de un uso indebido o negligente será responsabilidad del tutor legal, quien deberá sufragar el coste íntegro de la reparación o reposición.</p>
+                </div>
+                <div class="content-island legal-island legal-mini-card">
+                    <h3 style="font-family: var(--font-title); font-size: 18px; color: var(--color-navy); margin-bottom: 10px; font-weight: 800;">10. Canales de Atención</h3>
+                    <p class="legal-text" style="font-size: 0.95rem; margin: 0; line-height: 1.6;">Toda gestión académica o administrativa se canalizará vía email o el WhatsApp oficial del centro en horario de atención al público. Se ruega respetar el descanso del personal fuera de dicho horario, garantizando así la desconexión digital de los docentes.</p>
+                </div>
+                <div class="content-island legal-island legal-mini-card">
+                    <h3 style="font-family: var(--font-title); font-size: 18px; color: var(--color-navy); margin-bottom: 10px; font-weight: 800;">11. Objetos de Valor</h3>
+                    <p class="legal-text" style="font-size: 0.95rem; margin: 0; line-height: 1.6;">Centro Futura recomienda no acudir al centro con objetos de valor excesivo. El centro declina toda responsabilidad por la pérdida, extravío o deterioro fortuito de dispositivos electrónicos personales, dinero o prendas de ropa del alumnado.</p>
+                </div>
             </div>
         </section>
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="legal-badge-orange">12</span>
+                <span class="badge badge--orange" style="padding: 6px 12px; font-size: 16px;">12</span>
                 <h2 class="legal-title">Protocolo Sanitario y Responsabilidad</h2>
             </div>
             <div class="legal-text">
@@ -123,7 +175,7 @@ include 'includes/header.php';
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="legal-badge-dark">13</span>
+                <span class="badge badge--blue" style="padding: 6px 12px; font-size: 16px; background: var(--color-navy); color: white;">13</span>
                 <h2 class="legal-title">Protección de Datos y Videovigilancia</h2>
             </div>
             <div class="legal-text">
