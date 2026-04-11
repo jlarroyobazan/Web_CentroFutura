@@ -2,7 +2,7 @@
 /**
  * MOTOR DE MATRÍCULA ELITE - CENTRO FUTURA
  * Arquitectura: PHP Puro con Dompdf
- * Estilo: Bento Grid Apple Premium + Contrato Legal
+ * Estilo: Bento Grid Apple Premium + Contrato Legal + Logo Tipográfico
  */
 
 // Escudo para evitar que advertencias de PHP corrompan el archivo PDF
@@ -74,7 +74,7 @@ $auth_salida = isset($_POST['auth_salida']) ? 'SÍ AUTORIZA' : 'NO AUTORIZA';
 $firma_base64 = $_POST['firma_base64'] ?? '';
 $firma_html = $firma_base64 ? "<img src='$firma_base64' style='max-height: 60px; margin-top: 5px;'>" : "<div style='padding:20px; color:#f97316; font-size:10px;'>Firma física pendiente en el centro</div>";
 
-// 3. ESTRUCTURA HTML & CSS DEL PDF (Bento Grid Legal Premium)
+// 3. ESTRUCTURA HTML & CSS DEL PDF
 $html_pdf = "
 <html>
 <head>
@@ -82,8 +82,8 @@ $html_pdf = "
     @page { margin: 10mm 15mm; background-color: #ffffff; }
     body { font-family: 'Helvetica', 'Arial', sans-serif; color: #1e293b; font-size: 9pt; line-height: 1.4; background-color: #ffffff; margin: 0; padding: 0; }
     
-    .orange { color: #f97316; }
-    .navy { color: #0f172a; }
+    .orange { color: #ED7D31; }
+    .navy { color: #1e293b; }
     .header { width: 100%; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-bottom: 20px; }
     .badge { background-color: #0f172a; color: #ffffff; padding: 4px 10px; border-radius: 8px; font-size: 8pt; font-weight: bold; }
     
@@ -96,8 +96,8 @@ $html_pdf = "
     
     .critical { background-color: #fff7ed; border: 1.2px solid #fdba74; padding: 15px; border-radius: 10px; margin: 12px 0; }
     
-    .next-steps-box { background-color: #0f172a; color: #ffffff; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 5px solid #f97316; }
-    .next-steps-title { color: #f97316; font-size: 8.5pt; font-weight: bold; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
+    .next-steps-box { background-color: #0f172a; color: #ffffff; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 5px solid #ED7D31; }
+    .next-steps-title { color: #ED7D31; font-size: 8.5pt; font-weight: bold; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
     .next-steps-text { font-size: 8pt; line-height: 1.5; opacity: 0.95; }
     
     .signature-box { margin: 0 auto; width: 280px; height: 90px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; text-align: center; }
@@ -110,7 +110,7 @@ $html_pdf = "
     .legal-card { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; }
     .legal-card-title { font-size: 7.5pt; font-weight: bold; color: #0f172a; margin-bottom: 4px; text-transform: uppercase; }
     .legal-card-text { font-size: 6.5pt; color: #475569; line-height: 1.4; text-align: justify; }
-    .num-pill { background-color: #f97316; color: white; padding: 1px 5px; border-radius: 4px; font-size: 6pt; margin-right: 4px; display: inline-block; }
+    .num-pill { background-color: #ED7D31; color: white; padding: 1px 5px; border-radius: 4px; font-size: 6pt; margin-right: 4px; display: inline-block; }
     .num-pill-dark { background-color: #0f172a; color: white; padding: 1px 5px; border-radius: 4px; font-size: 6pt; margin-right: 4px; display: inline-block; }
 </style>
 </head>
@@ -118,7 +118,11 @@ $html_pdf = "
 
 <table class='header'>
     <tr>
-        <td><div style='font-size: 18pt; font-weight: 900;' class='navy'>Centro <span class='orange'>Futura</span></div></td>
+        <td>
+            <div style=\"font-size: 19pt; letter-spacing: -0.5px;\">
+                <span style=\"color: #1e293b; font-weight: normal;\">Centro</span> <span style=\"color: #ED7D31; font-weight: bold;\">Futura</span>
+            </div>
+        </td>
         <td align='right'>
             <span class='badge'>$id_expediente</span><br>
             <span style='font-size:7pt; color:#94a3b8; font-weight: bold; margin-top:5px;'>REGISTRO: $fecha_registro</span>
@@ -178,7 +182,7 @@ $html_pdf = "
             </td>
             <td width='50%' class='bento-cell'>
                 <div class='bento-cell-title'>Preferencia Horaria</div>
-                <div class='bento-cell-desc'>$horario_preferencia</div>
+                <div class='bento-cell-desc'>$horario_preferente</div>
             </td>
         </tr>
     </table>
@@ -231,7 +235,11 @@ $html_pdf = "
 
 <table class='header' style='margin-bottom: 10px;'>
     <tr>
-        <td><div style='font-size: 14pt; font-weight: 900;' class='navy'>Centro <span class='orange'>Futura</span></div></td>
+        <td>
+            <div style=\"font-size: 15pt; letter-spacing: -0.5px;\">
+                <span style=\"color: #1e293b; font-weight: normal;\">Centro</span> <span style=\"color: #ED7D31; font-weight: bold;\">Futura</span>
+            </div>
+        </td>
         <td align='right'>
             <div style='font-weight:bold; font-size:9pt; color:#0f172a;'>CONTRATO DE SERVICIOS</div>
             <div style='font-size:7pt; color:#94a3b8;'>Anexo a: $id_expediente</div>
@@ -244,7 +252,7 @@ $html_pdf = "
 <table class='legal-table'>
     <tr>
         <td class='legal-td'>
-            <div class='legal-card' style='border-left: 3px solid #f97316;'>
+            <div class='legal-card' style='border-left: 3px solid #ED7D31;'>
                 <div class='legal-card-title'><span class='num-pill'>01</span> Régimen Económico</div>
                 <div class='legal-card-text'>
                     <strong>1.1. Devengo y Pago:</strong> El servicio se contrata por periodos mensuales. El pago se realizará entre los días 1 y 5 de cada mes. El retraso generará un recargo de 10€ a partir del día 10.<br>
