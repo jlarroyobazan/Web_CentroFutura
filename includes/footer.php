@@ -1,4 +1,10 @@
-<footer class="footer-island reveal mt-80">
+<?php
+// Fallback por si la variable base_url no llegó correctamente
+if (!isset($base_url)) {
+    $base_url = '/'; 
+}
+?>
+    <footer class="footer-island reveal mt-80">
         <div class="footer-grid">
             <div class="footer-col brand-col">
                 <span class="footer-logo">Centro Futura</span>
@@ -26,20 +32,20 @@
             <div class="footer-col">
                 <h3>Navegación</h3>
                 <ul class="footer-links">
-                    <li><a href="index.php#metodologia">Método Futura</a></li>
-                    <li><a href="index.php#etapas">Etapas Educativas</a></li>
-                    <li><a href="index.php#gabinete-nee">Gabinete Especializado NEE</a></li>
-                    <li><a href="index.php#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="<?php echo $base_url; ?>index.php#metodologia">Método Futura</a></li>
+                    <li><a href="<?php echo $base_url; ?>index.php#etapas">Etapas Educativas</a></li>
+                    <li><a href="<?php echo $base_url; ?>index.php#gabinete-nee">Gabinete Especializado NEE</a></li>
+                    <li><a href="<?php echo $base_url; ?>index.php#faq">Preguntas Frecuentes</a></li>
                 </ul>
             </div>
             
             <div class="footer-col">
                 <h3>Legal y Privacidad</h3>
                 <ul class="footer-links">
-                    <li><a href="aviso-legal.php">Aviso Legal</a></li>
-                    <li><a href="condiciones-generales.php">Términos y Condiciones</a></li>
-                    <li><a href="politica-de-privacidad.php">Política de Privacidad</a></li>
-                    <li><a href="politica-de-cookies.php">Política de Cookies</a></li>
+                    <li><a href="<?php echo $base_url; ?>aviso-legal.php">Aviso Legal</a></li>
+                    <li><a href="<?php echo $base_url; ?>condiciones-generales.php">Términos y Condiciones</a></li>
+                    <li><a href="<?php echo $base_url; ?>politica-de-privacidad.php">Política de Privacidad</a></li>
+                    <li><a href="<?php echo $base_url; ?>politica-de-cookies.php">Política de Cookies</a></li>
                 </ul>
             </div>
         </div>
@@ -50,7 +56,7 @@
     </footer>
 
     <div class="mobile-sticky-cta">
-        <a href="index.php#contacto" class="btn-primary" style="width: 100%; border-radius: 100px; padding: 16px; box-shadow: none;">¡Solicitar plaza!</a>
+        <a href="<?php echo $base_url; ?>index.php#contacto" class="btn-primary" style="width: 100%; border-radius: 100px; padding: 16px; box-shadow: none;">¡Solicitar plaza!</a>
     </div>
 
     <a href="https://wa.me/34676894284" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Abrir chat de WhatsApp para resolver dudas">
@@ -59,17 +65,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Barra de progreso de lectura
-            const progressBar = document.getElementById("scrollProgress");
-            window.addEventListener("scroll", () => {
-                const scrollTop = document.documentElement.scrollTop;
-                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                if(progressBar) {
-                    progressBar.style.width = (scrollTop / scrollHeight) * 100 + "%";
-                    progressBar.setAttribute("aria-valuenow", Math.round((scrollTop / scrollHeight) * 100));
-                }
-            });
-
             // Animación de aparición (Reveal)
             const revealObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
@@ -110,7 +105,7 @@
 
     <div id="cookieBanner" class="cookie-banner-wrapper" role="dialog" aria-labelledby="cookieTitle">
         <p class="cookie-text" id="cookieTitle">
-            <strong>Respetamos tu privacidad.</strong> En Centro Futura utilizamos cookies propias (necesarias para la web) y de terceros (para analítica y medición). Puedes aceptar todas, rechazarlas o configurarlas a tu medida. Más info en nuestra <a href="politica-de-cookies.php" class="link-orange">Política de Cookies</a>.
+            <strong>Respetamos tu privacidad.</strong> En Centro Futura utilizamos cookies propias (necesarias para la web) y de terceros (para analítica y medición). Puedes aceptar todas, rechazarlas o configurarlas a tu medida. Más info en nuestra <a href="<?php echo $base_url; ?>politica-de-cookies.php" class="link-orange">Política de Cookies</a>.
         </p>
         <div class="cookie-actions">
             <button id="btnConfigCookies" class="btn-cookie-link">Configurar</button>
@@ -160,34 +155,23 @@
             const reopenBtn = document.getElementById('reopenCookiesBtn');
             const toggleAnalytics = document.getElementById('toggleAnalytics');
             
-            // Constante del nombre de nuestra cookie de consentimiento
             const CONSENT_KEY = 'futura-consent';
 
-            // Función principal para cargar scripts condicionales (Ej: Google Analytics)
             function loadThirdPartyScripts() {
                 const consent = JSON.parse(localStorage.getItem(CONSENT_KEY));
                 if (consent && consent.analytics) {
-                    console.log("Cookies analíticas aceptadas: Cargando Google Analytics...");
-                    // AQUI DEBES PEGAR EL SCRIPT DE GOOGLE ANALYTICS
-                    // Ejemplo:
-                    // let script = document.createElement('script');
-                    // script.src = "https://www.googletagmanager.com/gtag/js?id=TU-ID-DE-GOOGLE";
-                    // document.head.appendChild(script);
-                } else {
-                    console.log("Cookies analíticas rechazadas: Bloqueando scripts de terceros.");
+                    console.log("Cookies analíticas aceptadas.");
                 }
             }
 
-            // Ocultar banner y mostrar botón flotante
             function hideBannerShowBtn() {
                 banner.classList.remove('show');
                 setTimeout(() => { reopenBtn.style.display = 'flex'; }, 600);
             }
 
-            // Guardar preferencias en LocalStorage (Válido legalmente en lugar de document.cookie para el estado)
             function saveConsent(analyticsVal) {
                 const consentData = {
-                    technical: true, // Siempre true
+                    technical: true,
                     analytics: analyticsVal,
                     timestamp: new Date().getTime()
                 };
@@ -197,41 +181,33 @@
                 loadThirdPartyScripts();
             }
 
-            // COMPROBACIÓN INICIAL AL CARGAR LA PÁGINA
             if (!localStorage.getItem(CONSENT_KEY)) {
-                // Si no hay consentimiento, mostrar banner después de 1 segundo (evita parpadeos)
                 setTimeout(() => { banner.classList.add('show'); }, 1000);
             } else {
-                // Si ya decidió, mostrar el botón de engranaje y ejecutar scripts si procede
                 reopenBtn.style.display = 'flex';
                 loadThirdPartyScripts();
             }
 
-            // EVENTOS DE LOS BOTONES DEL BANNER
             document.getElementById('btnAcceptCookies').addEventListener('click', () => { saveConsent(true); });
             document.getElementById('btnRejectCookies').addEventListener('click', () => { saveConsent(false); });
             
             document.getElementById('btnConfigCookies').addEventListener('click', () => {
-                // Cargar estado previo en los toggles si existe
                 const saved = JSON.parse(localStorage.getItem(CONSENT_KEY));
                 if(saved) { toggleAnalytics.checked = saved.analytics; }
                 modal.classList.add('show');
             });
 
-            // EVENTOS DEL MODAL
             document.getElementById('closeCookieModal').addEventListener('click', () => { modal.classList.remove('show'); });
             document.getElementById('btnSaveCookiePreferences').addEventListener('click', () => {
                 saveConsent(toggleAnalytics.checked);
             });
 
-            // EVENTO REABRIR (El engranaje flotante, y la función global para el enlace en tu Política de Cookies)
             reopenBtn.addEventListener('click', () => {
                 const saved = JSON.parse(localStorage.getItem(CONSENT_KEY));
                 if(saved) { toggleAnalytics.checked = saved.analytics; }
                 modal.classList.add('show');
             });
 
-            // Exponer función para que el enlace del texto de "Política de cookies" pueda abrir el modal
             window.openCookieBanner = function() {
                 const saved = JSON.parse(localStorage.getItem(CONSENT_KEY));
                 if(saved) { toggleAnalytics.checked = saved.analytics; }

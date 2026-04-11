@@ -1,3 +1,11 @@
+<?php
+// 🛠️ RUTA BASE DINÁMICA: 
+// Si trabajas en localhost dentro de una carpeta, pon el nombre aquí (Ej: '/mi-web/')
+// Si está subida a internet o en la raíz, déjalo como '/'
+if (!isset($base_url)) {
+    $base_url = '/'; 
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Red+Hat+Display:wght@800;900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>style.css">
 
     <script type="application/ld+json">
     {
@@ -40,33 +48,6 @@
         "@type": "AggregateRating",
         "ratingValue": "4.9",
         "reviewCount": "192"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Servicios Psicopedagógicos y Apoyo Escolar",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Gabinete Psicopedagógico TDAH y TEA"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Intervención en Dislexia y Dificultades del Aprendizaje"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Apoyo Escolar Grupos Reducidos (Primaria, ESO, Bachillerato)"
-            }
-          }
-        ]
       }
     }
     </script>
@@ -100,28 +81,28 @@
     <header class="site-header">
         <div class="header-inner">
             <div class="logo">
-                <a href="index.php" style="text-decoration: none; display: flex; align-items: center;">
+                <a href="<?php echo $base_url; ?>index.php" style="text-decoration: none; display: flex; align-items: center;">
                     <span class="text-orange" style="font-family: var(--font-title); font-weight: 800; font-size: 24px; letter-spacing: -0.02em;">Centro Futura</span>
                 </a>
             </div>
             
             <nav class="main-nav" aria-label="Navegación principal">
-                <a href="index.php">Inicio</a>
+                <a href="<?php echo $base_url; ?>index.php">Inicio</a>
                 <div class="nav-dropdown">
                     <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">El centro <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
                     <div class="dropdown-menu" role="menu">
-                        <a href="nosotros.php" role="menuitem">Quiénes somos</a>
-                        <a href="metodo.php" role="menuitem">Nuestro método</a>
-                        <a href="espacio.php" role="menuitem">Nuestro espacio</a>
+                        <a href="<?php echo $base_url; ?>nosotros.php" role="menuitem">Quiénes somos</a>
+                        <a href="<?php echo $base_url; ?>metodo.php" role="menuitem">Nuestro método</a>
+                        <a href="<?php echo $base_url; ?>espacio.php" role="menuitem">Nuestro espacio</a>
                     </div>
                 </div>
-                <a href="gabinete.php">Apoyo especializado</a>
-                <a href="tarifas.php">Tarifas</a>
-                <a href="blog.php">Blog educativo</a>
-                <a href="contacto.php">Hablemos</a>
+                <a href="<?php echo $base_url; ?>gabinete.php">Apoyo especializado</a>
+                <a href="<?php echo $base_url; ?>tarifas.php">Tarifas</a>
+                <a href="<?php echo $base_url; ?>blog.php">Blog educativo</a>
+                <a href="<?php echo $base_url; ?>contacto.php">Hablemos</a>
             </nav>
 
-            <a href="solicitud.php" class="btn-primary btn--small" style="margin-left: 20px;">Solicitar plaza</a>
+            <a href="<?php echo $base_url; ?>solicitud.php" class="btn-primary btn--small" style="margin-left: 20px;">Solicitar plaza</a>
 
             <button class="mobile-menu-btn" aria-label="Abrir menú móvil" aria-expanded="false">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -135,7 +116,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Lógica de la Barra de Progreso de Lectura
             window.addEventListener('scroll', () => {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -144,7 +124,6 @@
                 if(progressBar) progressBar.style.width = scrolled + '%';
             });
 
-            // 2. Lógica del Menú Móvil
             const mobileBtn = document.querySelector('.mobile-menu-btn');
             const mainNav = document.querySelector('.main-nav');
             
