@@ -91,18 +91,18 @@ if (!isset($base_url)) {
                 <div class="nav-dropdown">
                     <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">El centro <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
                     <div class="dropdown-menu" role="menu">
-                        <a href="<?php echo $base_url; ?>nosotros.php" role="menuitem">Quiénes somos</a>
-                        <a href="<?php echo $base_url; ?>metodo.php" role="menuitem">Nuestro método</a>
-                        <a href="<?php echo $base_url; ?>espacio.php" role="menuitem">Nuestro espacio</a>
+                        <a href="<?php echo $base_url; ?>quienes-somos-academia-rivas.php" role="menuitem">Quiénes somos</a>
+                        <a href="<?php echo $base_url; ?>metodologia-neuroeducacion.php" role="menuitem">Nuestro método</a>
+                        <a href="<?php echo $base_url; ?>instalaciones-centro-futura.php" role="menuitem">Nuestro espacio</a>
                     </div>
                 </div>
-                <a href="<?php echo $base_url; ?>gabinete.php">Apoyo especializado</a>
-                <a href="<?php echo $base_url; ?>tarifas.php">Tarifas</a>
-                <a href="<?php echo $base_url; ?>blog.php">Blog educativo</a>
+                <a href="<?php echo $base_url; ?>gabinete-psicopedagogico-rivas.php">Apoyo especializado</a>
+                <a href="<?php echo $base_url; ?>precios-apoyo-escolar-rivas.php">Tarifas</a>
+                <a href="<?php echo $base_url; ?>blog-recursos-educativos.php">Blog educativo</a>
                 <a href="<?php echo $base_url; ?>contacto.php">Hablemos</a>
             </nav>
 
-            <a href="<?php echo $base_url; ?>solicitud.php" class="btn-primary btn--small" style="margin-left: 20px;">Solicitar plaza</a>
+            <a href="<?php echo $base_url; ?>inscripcion-curso-escolar.php" class="btn-primary btn--small" style="margin-left: 20px;">Solicitar plaza</a>
 
             <button class="mobile-menu-btn" aria-label="Abrir menú móvil" aria-expanded="false">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
