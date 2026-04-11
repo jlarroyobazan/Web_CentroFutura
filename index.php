@@ -480,18 +480,24 @@ include 'includes/header.php';
             
                         <div class="contact-form-panel">
                             <div class="form-card">
-                                <h3 class="form-title">Reserva tu plaza</h3>
-                                <p class="form-subtitle">Plazas limitadas. Grupos máx. 6 alumnos.</p>
+                                <h3 class="form-title">¿Tienes dudas? Escríbenos</h3>
+                                <p class="form-subtitle">Consulta disponibilidad o solicita información sin compromiso.</p>
                                 
                                 <form class="real-form" action="#" method="POST">
                                     <div class="input-group floating-label-group">
                                         <input type="text" id="nombre" name="nombre" placeholder=" " required autocomplete="name" aria-required="true">
-                                        <label for="nombre">Nombre del tutor/a</label>
+                                        <label for="nombre">Nombre completo</label>
                                     </div>
-                                    
-                                    <div class="input-group floating-label-group">
-                                        <input type="tel" id="telefono" name="telefono" placeholder=" " required autocomplete="tel" aria-required="true">
-                                        <label for="telefono">Teléfono de contacto</label>
+
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0 15px;">
+                                        <div class="input-group floating-label-group">
+                                            <input type="email" id="correo" name="correo" placeholder=" " required autocomplete="email" aria-required="true">
+                                            <label for="correo">Correo electrónico</label>
+                                        </div>
+                                        <div class="input-group floating-label-group">
+                                            <input type="tel" id="telefono" name="telefono" placeholder=" " required autocomplete="tel" aria-required="true">
+                                            <label for="telefono">Teléfono</label>
+                                        </div>
                                     </div>
             
                                     <div class="input-group floating-label-group">
@@ -505,12 +511,24 @@ include 'includes/header.php';
                                         <label for="curso">Necesidad del alumno</label>
                                         <div class="select-arrow" aria-hidden="true">▼</div>
                                     </div>
+
+                                    <div class="input-group floating-label-group">
+                                        <textarea id="mensaje" name="mensaje" placeholder=" " rows="3" required aria-required="true" style="resize: vertical; min-height: 80px;"></textarea>
+                                        <label for="mensaje">¿En qué podemos ayudarte?</label>
+                                    </div>
+
+                                    <div style="margin-top: 15px; margin-bottom: 20px;">
+                                        <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 13px; color: var(--color-text);">
+                                            <input type="checkbox" name="acepta_privacidad" required style="width: 18px; height: 18px; accent-color: var(--color-orange); margin-top: 2px;">
+                                            <span>He leído y acepto la <a href="politica-de-privacidad.php" target="_blank" class="link-orange">política de privacidad</a>. *</span>
+                                        </label>
+                                    </div>
             
                                     <button type="submit" class="btn-primary btn-submit mt-10">
-                                        Reservar clase gratis
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                        Enviar consulta
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                                     </button>
-                                    <p class="form-disclaimer">Al enviar, aceptas nuestra <a href="politica-de-privacidad.php" target="_blank">política de privacidad</a>. No enviamos spam.</p>
+                                    <p class="form-disclaimer">Tus datos están seguros. No enviamos spam.</p>
                                 </form>
                             </div>
                         </div>
