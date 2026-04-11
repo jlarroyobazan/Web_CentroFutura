@@ -386,15 +386,26 @@ include 'includes/header.php';
                     </div>
                 </section>
                 
-                <section class="seo-block island-section mt-80 pt-50 reveal" style="border-top: 1px solid rgba(0,0,0,0.05);">
-                    <div class="max-w-800 mx-auto text-center">
-                        <h2 class="section-title" style="font-size: 28px;">Referentes en <span class="text-orange">Apoyo Escolar en Rivas Vaciamadrid</span></h2>
-                        <p class="section-description" style="font-size: 16px; margin-bottom: 20px;">En Centro Futura llevamos más de 13 años demostrando que una educación a medida es la clave del éxito. Nuestra academia en Rivas Futura no es un centro de estudios convencional; es un espacio donde el rendimiento académico y el bienestar emocional van de la mano.</p>
-                        <h3 style="font-family: var(--font-title); font-size: 20px; font-weight: 800; color: var(--color-navy); margin-bottom: 15px;">Gabinete Psicopedagógico Integrado</h3>
-                        <p style="font-size: 16px; color: var(--color-text); line-height: 1.6;">A diferencia de otras academias, contamos con un <strong>gabinete psicopedagógico especializado</strong> para atender necesidades específicas como TDAH, Dislexia, TEA o Altas Capacidades. Diseñamos planes de intervención únicos que transforman la forma en que tu hijo percibe el aprendizaje.</p>
+                <section class="seo-block island-section mt-80 reveal" style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 60px;">
+                    <div class="max-w-900 mx-auto text-center">
+                        <span class="badge badge--orange mb-15">LÍDERES EN RIVAS</span>
+                        <h2 class="section-title">Referentes en <span class="text-orange">Apoyo Escolar en Rivas Vaciamadrid</span></h2>
+                        
+                        <p class="section-description mt-20" style="font-size: 18px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                            En Centro Futura llevamos más de <strong>13 años</strong> demostrando que una educación a medida es la clave del éxito. 
+                            Nuestra academia en Rivas Futura no es un centro de estudios convencional; es un espacio donde el rendimiento académico y el bienestar emocional van de la mano.
+                        </p>
+
+                        <div class="mt-50 text-left glass-effect" style="border-radius: var(--radius-lg); background: var(--bg-body); padding: 40px; border: 1px solid rgba(0,0,0,0.04); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <div class="icon-bg-purple mb-20" aria-hidden="true" style="width: 60px; height: 60px; font-size: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">🧠</div>
+                            <h3 class="navy mb-15" style="font-family: var(--font-title); font-weight: 800; font-size: 24px; color: var(--color-navy);">Gabinete Psicopedagógico Integrado</h3>
+                            <p class="gray" style="font-size: 16px; line-height: 1.8; color: var(--color-text); max-width: 700px; margin-bottom: 0;">
+                                A diferencia de otras academias, contamos con un <strong>gabinete psicopedagógico especializado</strong> para atender necesidades específicas como 
+                                <span class="text-orange" style="font-weight: 700;">TDAH, Dislexia, TEA o Altas Capacidades</span>. Diseñamos planes de intervención únicos que transforman la forma en que tu hijo percibe el aprendizaje.
+                            </p>
+                        </div>
                     </div>
                 </section>
-
                 <section id="faq" class="faq island-section mt-80">
                     <div class="faq-container">
                         <h2 class="section-title text-center mb-50">Preguntas Frecuentes</h2>
