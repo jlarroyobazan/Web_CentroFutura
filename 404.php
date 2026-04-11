@@ -1,4 +1,7 @@
 <?php 
+// 🛠️ RUTA BASE DINÁMICA: Asegura que los enlaces del 404 funcionen en cualquier subcarpeta
+if (!isset($base_url)) { $base_url = '/'; }
+
 // SEO Dinámico para la página de Error
 $pageTitle = "Error 404 - Página no encontrada | Centro Futura";
 $pageDescription = "Ups... parece que esta página ha faltado a clase. Vuelve al inicio de la Academia Centro Futura.";
@@ -124,10 +127,10 @@ include 'includes/header.php';
         </div>
 
         <div class="error-actions">
-            <a href="index.php" class="btn-primary">
+            <a href="<?php echo $base_url; ?>index.php" class="btn-primary">
                 Volver a la clase (Inicio)
             </a>
-            <a href="contacto.php" class="btn-ghost">
+            <a href="<?php echo $base_url; ?>contacto.php" class="btn-ghost">
                 Avisar a secretaría
             </a>
         </div>
