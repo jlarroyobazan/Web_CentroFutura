@@ -63,7 +63,7 @@ if (!isset($base_url)) {
     </div>
 
     <a href="https://wa.me/34676894284" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat con Centro Futura" style="background: transparent; box-shadow: none; padding: 0;">
-        <img src="<?php echo $base_url; ?>img/whatsapp.webp" alt="Contactar por WhatsApp" width="60" height="60" style="filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.15)); display: block; transition: transform 0.3s ease;">
+        <img src="<?php echo $base_url; ?>img/whatsapp.svg" alt="Contactar por WhatsApp" width="60" height="60" style="filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.15)); display: block; transition: transform 0.3s ease;">
     </a>
 
     <script>
