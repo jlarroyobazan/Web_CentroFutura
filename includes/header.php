@@ -17,7 +17,7 @@ if (!isset($base_url)) {
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Red+Hat+Display:wght@800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Red+Hat+Display:wght@300;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="<?php echo $base_url; ?>style.css">
 
@@ -81,14 +81,15 @@ if (!isset($base_url)) {
     <header class="site-header">
         <div class="header-inner">
             <div class="logo">
-                <a href="<?php echo $base_url; ?>index.php" style="text-decoration: none; display: flex; align-items: center;">
-                    <span class="text-orange" style="font-family: var(--font-title); font-weight: 800; font-size: 24px; letter-spacing: -0.02em;">Centro Futura</span>
+                <a href="<?php echo $base_url; ?>index.php" style="text-decoration: none; display: flex; align-items: center; font-family: var(--font-title, 'Red Hat Display', sans-serif); font-size: 24px; letter-spacing: -0.02em;">
+                    <span style="color: var(--color-navy, #1e293b); font-weight: 300;">Centro</span>
+                    <span style="color: #ED7D31; font-weight: 800;">Futura</span>
                 </a>
             </div>
             
             <nav class="main-nav" aria-label="Navegación principal">
                 <div class="nav-dropdown">
-                    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">La Academia <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Conócenos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
                     <div class="dropdown-menu" role="menu">
                         <a href="<?php echo $base_url; ?>quienes-somos-academia-rivas.php" role="menuitem">Nosotros</a>
                         <a href="<?php echo $base_url; ?>metodologia-neuroeducacion.php" role="menuitem">Metodología</a>

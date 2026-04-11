@@ -7,7 +7,10 @@ if (!isset($base_url)) {
     <footer class="footer-island reveal mt-80">
         <div class="footer-grid">
             <div class="footer-col brand-col">
-                <span class="footer-logo">Centro Futura</span>
+                <a href="<?php echo $base_url; ?>index.php" style="text-decoration: none; display: flex; align-items: center; font-family: var(--font-title, 'Red Hat Display', sans-serif); font-size: 24px; letter-spacing: -0.02em; margin-bottom: 15px;">
+                    <span style="color: #FFFFFF; font-weight: 300;">Centro</span>
+                    <span style="color: #ED7D31; font-weight: 800;">Futura</span>
+                </a>
                 <p class="footer-desc">Academia líder en apoyo escolar y gabinete psicopedagógico (NEE) en Rivas Vaciamadrid. Restauramos la motivación y garantizamos el progreso académico de tus hijos.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Visitar nuestro perfil de Instagram">
@@ -60,7 +63,7 @@ if (!isset($base_url)) {
     </div>
 
     <a href="https://wa.me/34676894284" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat con Centro Futura" style="background: transparent; box-shadow: none; padding: 0;">
-        <img src="<?php echo $base_url; ?>img/whatsapp.svg" alt="Contactar por WhatsApp" width="60" height="60" style="filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.15)); display: block; transition: transform 0.3s ease;">
+        <img src="<?php echo $base_url; ?>img/whatsapp.webp" alt="Contactar por WhatsApp" width="60" height="60" style="filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.15)); display: block; transition: transform 0.3s ease;">
     </a>
 
     <script>
