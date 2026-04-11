@@ -59,8 +59,8 @@ if (!isset($base_url)) {
         <a href="<?php echo $base_url; ?>index.php#contacto" class="btn-primary" style="width: 100%; border-radius: 100px; padding: 16px; box-shadow: none;">¡Solicitar plaza!</a>
     </div>
 
-    <a href="https://wa.me/34676894284" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Abrir chat de WhatsApp para resolver dudas">
-        <svg viewBox="0 0 32 32" width="35" height="35" fill="white" aria-hidden="true"><path d="M16 2a13 13 0 0 0-11 20l-2 6 6-2a13 13 0 1 0 7-24zm0 24a11 11 0 0 1-5-1l-3 1 1-3a11 11 0 1 1 7 3zm6-7l-2-1c0 0-1 0-1 0s0 0 0 0l-1 1c0 0-1 0-1 0a6 6 0 0 1-3-3s0 0 0 0l1-1v-1l-1-2c0 0-1 0-1 0s-1 1-1 2c0 1 0 3 3 5s4 4 6 4 2-1 2-2c0 0 0-1 0-1z"/></svg>
+    <a href="https://wa.me/34676894284" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat con Centro Futura" style="background: transparent; box-shadow: none; padding: 0;">
+        <img src="<?php echo $base_url; ?>img/whatsapp.svg" alt="Contactar por WhatsApp" width="60" height="60" style="filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.15)); display: block; transition: transform 0.3s ease;">
     </a>
 
     <script>

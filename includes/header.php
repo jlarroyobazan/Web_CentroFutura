@@ -87,7 +87,6 @@ if (!isset($base_url)) {
             </div>
             
             <nav class="main-nav" aria-label="Navegación principal">
-                <a href="<?php echo $base_url; ?>index.php">Inicio</a>
                 <div class="nav-dropdown">
                     <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">La Academia <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
                     <div class="dropdown-menu" role="menu">
