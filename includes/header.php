@@ -12,14 +12,14 @@ if (!isset($base_url)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#F5F5F7">
-    <title><?php echo $pageTitle ?? 'Centro Futura | Apoyo Escolar y Gabinete NEE en Rivas'; ?></title>
-    <meta name="description" content="<?php echo $pageDescription ?? 'Potenciamos el talento de tu hijo. Especialistas en apoyo escolar, gabinete psicopedagógico y neuroeducación en Rivas Vaciamadrid.'; ?>">
+    <title><?php echo $pageTitle ?? 'Academia Centro Futura | Apoyo Escolar y NEE en Rivas Vaciamadrid'; ?></title>
+    <meta name="description" content="<?php echo $pageDescription ?? 'Especialistas en apoyo escolar, gabinete psicopedagógico (TDAH, Dislexia) y técnicas de estudio en Rivas Vaciamadrid.'; ?>">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Red+Hat+Display:wght@300;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="<?php echo $base_url; ?>css/main.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>style.css">
 
     <script type="application/ld+json">
     {
@@ -28,7 +28,7 @@ if (!isset($base_url)) {
       "name": "Centro Futura Rivas",
       "url": "https://centrofutura.es",
       "logo": "https://centrofutura.es/img/logo.png",
-      "description": "Gabinete psicopedagógico especializado en NEE y academia de apoyo escolar en Rivas Vaciamadrid.",
+      "description": "Academia de apoyo escolar y gabinete psicopedagógico especializado en NEE en Rivas Vaciamadrid.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Zona Centro / Rivas Futura",
@@ -51,6 +51,28 @@ if (!isset($base_url)) {
       }
     }
     </script>
+
+    <style>
+        .mobile-menu-btn { display: none; background: transparent; border: none; cursor: pointer; padding: 5px; }
+        @media (max-width: 950px) {
+            .mobile-menu-btn { display: block; }
+            .main-nav.nav-open {
+                display: flex !important;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(245, 245, 247, 0.98);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+            }
+            .header-inner { position: relative; }
+        }
+    </style>
 </head>
 <body>
 
@@ -59,9 +81,9 @@ if (!isset($base_url)) {
     <header class="site-header">
         <div class="header-inner">
             <div class="logo">
-                <a href="<?php echo $base_url; ?>index.php" class="header-logo-link">
-                    <span class="logo-text-light">Centro</span>
-                    <span class="logo-text-bold">Futura</span>
+                <a href="<?php echo $base_url; ?>index.php" style="text-decoration: none; display: flex; align-items: center; font-family: var(--font-title, 'Red Hat Display', sans-serif); font-size: 24px; letter-spacing: -0.02em;">
+                    <span style="color: var(--color-navy, #1e293b); font-weight: 300;">Centro</span>
+                    <span style="color: #ED7D31; font-weight: 800;">Futura</span>
                 </a>
             </div>
             
@@ -80,10 +102,10 @@ if (!isset($base_url)) {
                 <a href="<?php echo $base_url; ?>contacto.php">Contacto</a>
             </nav>
 
-            <a href="<?php echo $base_url; ?>inscripcion-curso-escolar.php" class="btn-primary btn--small header-cta-btn">Asegurar plaza</a>
+            <a href="<?php echo $base_url; ?>inscripcion-curso-escolar.php" class="btn-primary btn--small" style="margin-left: 20px;">Reserva tu plaza</a>
 
             <button class="mobile-menu-btn" aria-label="Abrir menú móvil" aria-expanded="false">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -94,16 +116,14 @@ if (!isset($base_url)) {
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Progreso de scroll
             window.addEventListener('scroll', () => {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
                 const scrolled = (winScroll / height) * 100;
                 const progressBar = document.getElementById('scrollProgress');
                 if(progressBar) progressBar.style.width = scrolled + '%';
-            }, { passive: true });
+            });
 
-            // Menú Móvil
             const mobileBtn = document.querySelector('.mobile-menu-btn');
             const mainNav = document.querySelector('.main-nav');
             

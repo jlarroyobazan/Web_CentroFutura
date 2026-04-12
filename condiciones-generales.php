@@ -3,140 +3,190 @@
 if (!isset($base_url)) { $base_url = '/'; }
 
 // SEO Dinámico para la página legal
-$pageTitle = "Acuerdo de Servicios y Convivencia - Centro Futura | Rivas Vaciamadrid";
-$pageDescription = "Conoce nuestro marco de confianza, normativas de convivencia y términos de servicio en Centro Futura. Transparencia y empatía para todas las familias.";
+$pageTitle = "Condiciones Generales - Centro Futura | Rivas Vaciamadrid";
+$pageDescription = "Estatuto Jurídico, Reglamento Interno y Términos de Contratación de los servicios educativos y psicopedagógicos de Centro Futura.";
 
 // Invocación de la cabecera modular
 include 'includes/header.php'; 
 ?>
 
+<style>
+    /* Tipografía Premium para Textos Legales (Mejora de Legibilidad UX) */
+    .legal-text p {
+        font-size: 17px;
+        line-height: 1.8;
+        color: #333336;
+        margin-bottom: 20px;
+    }
+    .legal-text strong {
+        color: var(--color-navy);
+        font-weight: 800;
+    }
+    
+    /* Encabezados de sección numerados */
+    .legal-header-flex {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        padding-bottom: 15px;
+    }
+    
+    .legal-title {
+        font-family: var(--font-title);
+        font-size: 24px;
+        color: var(--color-navy);
+        margin: 0;
+        font-weight: 900;
+    }
+
+    /* Efecto interactivo para las tarjetas de datos */
+    .legal-mini-card {
+        background: var(--bg-body);
+        border: 1px solid rgba(0,0,0,0.04);
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        margin: 0 !important; /* Sobreescribe el margen por defecto de content-island */
+    }
+    .legal-mini-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-sm);
+        background: var(--color-white);
+    }
+</style>
+
 <main class="page-wrapper legal-page-wrapper mt-40">
     
     <header class="text-center mb-50 reveal">
-        <span class="badge badge--orange mb-15">NUESTRO MARCO DE CONFIANZA</span>
-        <h1 class="section-title">Acuerdo de <span class="text-orange">Servicios</span></h1>
-        <p class="section-description mx-auto max-w-600 mt-10">Términos de contratación y normas de convivencia diseñadas para proteger el bienestar y el progreso de todos nuestros alumnos. • Edición <?php echo date('Y'); ?></p>
+        <span class="badge badge--orange mb-15">ESTATUTO JURÍDICO Y REGLAMENTO INTERNO</span>
+        <h1 class="section-title">Condiciones <span class="text-orange">Generales</span></h1>
+        <p class="section-description mx-auto max-w-600 mt-10">Marco Legal de Prestación de Servicios Educativos • Edición <?php echo date('Y'); ?></p>
     </header>
 
-    <div class="legal-content mx-auto legal-container-limit">
+    <div class="legal-content mx-auto" style="max-width: 900px;">
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="badge badge--orange legal-badge">01</span>
-                <h2 class="legal-title">Transparencia Económica y Pagos</h2>
+                <span class="badge badge--orange" style="padding: 6px 12px; font-size: 16px;">01</span>
+                <h2 class="legal-title">Régimen Económico y Contractual</h2>
             </div>
             <div class="legal-text">
-                <p><strong>1.1. Gestión de Cuotas:</strong> Para poder mantener la máxima calidad en nuestros grupos reducidos, el servicio se contrata por meses completos. Los pagos se gestionan cómodamente entre los días <strong>1 y 5 de cada mes</strong>. Agradecemos vuestra puntualidad; tened en cuenta que las devoluciones o retrasos prolongados (a partir del día 10) nos generan gastos bancarios y administrativos que suponen un pequeño recargo de 10€.</p>
-                <p><strong>1.2. Cuotas Planas Anuales:</strong> Nuestras tarifas están prorrateadas. Esto significa que la cuota es la misma todos los meses, por lo que no realizamos compensaciones ni reembolsos por festivos del calendario escolar oficial, ni por inasistencias médicas o personales del alumno.</p>
-                <p><strong>1.3. Actualizaciones:</strong> Si fuera necesario actualizar nuestras tarifas para seguir ofreciendo el mejor servicio, os avisaremos siempre con total transparencia y al menos 30 días de antelación al inicio del nuevo curso.</p>
-            </div>
-        </section>
-
-        <section class="content-island legal-island reveal">
-            <div class="legal-header-flex">
-                <span class="badge badge--navy legal-badge">02</span>
-                <h2 class="legal-title">Pausas y Cancelación del Servicio</h2>
-            </div>
-            <div class="legal-text">
-                <p><strong>2.1. Comunicación de Baja:</strong> Entendemos que vuestras necesidades pueden cambiar. Solo os pedimos que nos aviséis de cualquier baja por escrito (email o WhatsApp) <strong>antes del día 25 del mes anterior</strong>. Esto nos permite paralizar el recibo bancario a tiempo y ofrecer esa valiosa plaza a otra familia que esté en lista de espera.</p>
-                <p><strong>2.2. Cancelación por Convivencia:</strong> Nuestro deber es garantizar un espacio 100% seguro. Si nos vemos obligados a cancelar una plaza por faltas graves de respeto que alteren el bienestar del grupo, la cuota del mes en curso no será reembolsable.</p>
-            </div>
-        </section>
-
-        <section class="content-island legal-island reveal legal-border-orange">
-            <div class="legal-header-flex">
-                <span class="badge badge--orange legal-badge">03</span>
-                <h2 class="legal-title">Garantía de Continuidad Educativa</h2>
-            </div>
-            <div class="legal-text">
-                <p>Ante situaciones de fuerza mayor que nos impidan abrir las puertas físicamente (alertas climáticas severas, huelgas de transporte u otras restricciones gubernamentales), en <strong>Centro Futura</strong> no dejamos a los alumnos solos. Trasladaremos las sesiones de forma fluida a nuestra <strong>Modalidad de Aula Virtual</strong>, manteniendo intacto nuestro compromiso, el progreso del alumno y las condiciones del servicio.</p>
+                <p><strong>1.1. Devengo y Pago:</strong> El servicio se contrata por periodos mensuales completos. El pago de la cuota se realizará obligatoriamente mediante transferencia o método acordado entre los días <strong>1 y 5 de cada mes</strong>. El retraso en el pago generará un recargo por gestión administrativa de 10€ a partir del día 10.</p>
+                <p><strong>1.2. Prorrateo e Inasistencias:</strong> Las tarifas responden a un cálculo anual de costes operativos. Centro Futura no efectuará reducciones, reembolsos ni compensaciones por festivos locales, nacionales, periodos vacacionales establecidos en el calendario escolar o inasistencias debidas a motivos personales, médicos o viajes del alumno.</p>
+                <p><strong>1.3. Actualización de Tarifas:</strong> El centro se reserva el derecho de actualizar el importe de las cuotas al inicio de cada curso académico, notificándolo con 30 días de antelación.</p>
             </div>
         </section>
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="badge badge--navy legal-badge">04</span>
-                <h2 class="legal-title">Compromiso Mutuo de Éxito</h2>
+                <span class="badge badge--blue" style="padding: 6px 12px; font-size: 16px; background: var(--color-navy); color: white;">02</span>
+                <h2 class="legal-title">Protocolo de Bajas y Desistimiento</h2>
             </div>
             <div class="legal-text">
-                <p>Nos comprometemos a dar el 200%: ponemos a vuestra disposición un equipo colegiado, metodología neuroeducativa y todo nuestro cariño. Sin embargo, legal y pedagógicamente esto es una <strong>"obligación de medios"</strong>. El éxito final en los exámenes también requiere la constancia y el trabajo autónomo del alumno. Somos un equipo, y juntos llegaremos lo más lejos posible.</p>
+                <p><strong>2.1. Comunicación Formal:</strong> Para que una baja sea efectiva y no se emita el recibo del mes siguiente, el tutor legal deberá comunicarlo por escrito (email o mensaje certificado) antes del <strong>día 25 del mes anterior</strong> a la baja. La ausencia de comunicación previa implicará la aceptación del cargo del mes siguiente.</p>
+                <p><strong>2.2. Baja por Expulsión:</strong> En caso de que el centro determine la expulsión del alumno por incumplimiento del reglamento interno, no se procederá a la devolución de la parte proporcional de la cuota abonada.</p>
             </div>
         </section>
 
-        <section class="content-island legal-island reveal legal-border-red">
+        <section class="content-island legal-island reveal" style="border-top: 4px solid var(--color-orange);">
             <div class="legal-header-flex">
-                <span class="badge badge--red legal-badge">05</span>
-                <h2 class="legal-title">Clima de Convivencia y Respeto</h2>
+                <span class="badge badge--orange" style="padding: 6px 12px; font-size: 16px;">03</span>
+                <h2 class="legal-title">Cláusula de Continuidad Digital</h2>
             </div>
             <div class="legal-text">
-                <p><strong>5.1. Un entorno seguro:</strong> Para que las mentes neurodiversas florezcan, necesitan sentirse protegidas. Exigimos respeto absoluto hacia los profesores y compañeros. El acoso, el lenguaje ofensivo o la intimidación supondrán la pérdida inmediata de la plaza.</p>
-                <p><strong>5.2. Privacidad Digital:</strong> Queda estrictamente prohibido grabar en audio o vídeo a profesores o compañeros, así como difundir fotos del centro sin permiso. Cuidamos la privacidad de nuestros menores por encima de todo, y cualquier vulneración conllevará medidas legales.</p>
-            </div>
-        </section>
-
-        <section class="content-island legal-island reveal">
-            <div class="legal-header-flex">
-                <span class="badge badge--orange legal-badge">06</span>
-                <h2 class="legal-title">Cuidado de Nuestros Recursos y Equipo</h2>
-            </div>
-            <div class="legal-text">
-                <p><strong>6.1. Materiales Exclusivos:</strong> Los esquemas, guías y recursos que creamos están diseñados con mucho esfuerzo exclusivo para nuestros alumnos. Te pedimos que los uséis de forma personal y no los distribuyáis ni los comercialicéis.</p>
-                <p><strong>6.2. Cuidado de nuestro talento:</strong> Para proteger la estabilidad de nuestra plantilla, los tutores se comprometen a no intentar contratar de forma privada y externa a nuestros profesores durante su relación con el centro y hasta 12 meses después.</p>
+                <p>Ante situaciones de fuerza mayor ajenas al control del centro (inclemencias climáticas extremas, huelgas generales, fallos de suministro eléctrico en el área, crisis sanitarias o decretos gubernamentales), <strong>Centro Futura</strong> garantiza la prestación del servicio mediante <strong>modalidad de Aula Virtual</strong>. El cambio de modalidad presencial a remota no altera el objeto del contrato ni las obligaciones económicas del tutor, entendiéndose el servicio como prestado con la misma validez pedagógica.</p>
             </div>
         </section>
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="badge badge--navy legal-badge">07</span>
-                <h2 class="legal-title">Seguridad y Cuidado de los Alumnos</h2>
+                <span class="badge badge--blue" style="padding: 6px 12px; font-size: 16px; background: var(--color-navy); color: white;">04</span>
+                <h2 class="legal-title">Alcance de la Responsabilidad Pedagógica</h2>
             </div>
             <div class="legal-text">
-                <p>Cuidamos de tu hijo con total dedicación durante su horario de clase. Te pedimos colaboración con la puntualidad a la hora de recogerles, ya que nuestro equipo necesita atender a los siguientes alumnos o finalizar su jornada. Los retrasos recurrentes (más de 15 min) nos obligarían a facturar 15€ adicionales para cubrir el tiempo extra de custodia del personal.</p>
+                <p>El compromiso de Centro Futura es una <strong>obligación de medios</strong>: ponemos a disposición del alumno el personal cualificado, los recursos técnicos y la metodología avanzada. No obstante, el éxito académico, la obtención de títulos oficiales o la superación de exámenes dependen intrínsecamente del esfuerzo, aptitud y trabajo autónomo del estudiante, por lo que el centro declina cualquier responsabilidad legal sobre resultados finales.</p>
+            </div>
+        </section>
+
+        <section class="content-island legal-island reveal" style="border-top: 4px solid #e74c3c;">
+            <div class="legal-header-flex">
+                <span class="badge badge--orange" style="padding: 6px 12px; font-size: 16px; background: #e74c3c; color: white;">05</span>
+                <h2 class="legal-title">Régimen Disciplinario y Admisión</h2>
+            </div>
+            <div class="legal-text">
+                <p><strong>5.1. Convivencia:</strong> Se exige un respeto absoluto hacia el personal docente, administrativo y hacia el resto de los alumnos. El uso de lenguaje ofensivo, la intimidación o cualquier forma de acoso será sancionado con la expulsión inmediata.</p>
+                <p><strong>5.2. Ciberconvivencia:</strong> Se prohíbe terminantemente la grabación de audio o vídeo de las sesiones, así como la toma de fotografías de terceros sin consentimiento. La difusión de materiales que dañen la reputación de Centro Futura en plataformas digitales dará lugar a acciones legales por daños y perjuicios.</p>
+            </div>
+        </section>
+
+        <section class="content-island legal-island reveal">
+            <div class="legal-header-flex">
+                <span class="badge badge--orange" style="padding: 6px 12px; font-size: 16px;">06</span>
+                <h2 class="legal-title">Propiedad Intelectual y Exclusividad</h2>
+            </div>
+            <div class="legal-text">
+                <p><strong>6.1. Materiales:</strong> Todo el contenido didáctico, software y guías entregadas son propiedad exclusiva de Centro Futura. Su uso es estrictamente personal dentro del ámbito educativo, quedando prohibida su cesión, venta o reproducción pública.</p>
+                <p><strong>6.2. No Captación:</strong> Los tutores se comprometen a no contratar a los docentes de Centro Futura de forma externa para servicios de clases particulares mientras dure la relación contractual y hasta 12 meses después de finalizada la misma.</p>
+            </div>
+        </section>
+
+        <section class="content-island legal-island reveal">
+            <div class="legal-header-flex">
+                <span class="badge badge--blue" style="padding: 6px 12px; font-size: 16px; background: var(--color-navy); color: white;">07</span>
+                <h2 class="legal-title">Protocolo de Seguridad y Recogida</h2>
+            </div>
+            <div class="legal-text">
+                <p>El centro asume la custodia del alumno únicamente durante el horario lectivo contratado. No nos hacemos responsables de incidentes ocurridos fuera del local o antes/después de la hora de entrada/salida. En caso de retrasos recurrentes en la recogida de menores (superiores a 15 minutos), el centro podrá facturar 15€ por fracción de hora en concepto de servicio de guardia y custodia extraordinaria.</p>
             </div>
         </section>
 
         <section class="reveal mt-40 mb-40">
-            <div class="legal-mini-cards-grid">
-                <div class="content-island legal-mini-card">
-                    <h3 class="legal-mini-card-title text-orange">08. Uso de Imagen</h3>
-                    <p class="legal-text legal-mini-text">Si nos dais permiso, nos encanta celebrar sus éxitos. Usaremos imágenes de proyectos o dinámicas para nuestras redes corporativas, siempre velando por el buen gusto, el orgullo y la protección del menor.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div class="content-island legal-island legal-mini-card">
+                    <h3 style="font-family: var(--font-title); font-size: 18px; color: var(--color-orange); margin-bottom: 10px; font-weight: 800;">08. Uso de Imagen</h3>
+                    <p class="legal-text" style="font-size: 0.95rem; margin: 0; line-height: 1.6;">Se autoriza al centro a utilizar material audiovisual donde aparezca el alumno (fotos de proyectos, vídeos de actividades) para la comunicación interna y promoción en redes sociales corporativas, velando siempre por la protección del menor y su integridad.</p>
                 </div>
-                <div class="content-island legal-mini-card">
-                    <h3 class="legal-mini-card-title text-navy">09. Nuestras Aulas</h3>
-                    <p class="legal-text legal-mini-text">Nuestras instalaciones son el "tercer educador". Pedimos a los alumnos que cuiden el mobiliario. Si ocurriera algún daño grave por uso negligente, la familia deberá hacerse cargo de la reparación.</p>
+                <div class="content-island legal-island legal-mini-card">
+                    <h3 style="font-family: var(--font-title); font-size: 18px; color: var(--color-navy); margin-bottom: 10px; font-weight: 800;">09. Instalaciones</h3>
+                    <p class="legal-text" style="font-size: 0.95rem; margin: 0; line-height: 1.6;">Los alumnos deben hacer un uso diligente del mobiliario y los equipos informáticos. Cualquier daño derivado de un uso indebido o negligente será responsabilidad del tutor legal, quien deberá sufragar el coste íntegro de la reparación o reposición.</p>
                 </div>
-                <div class="content-island legal-mini-card">
-                    <h3 class="legal-mini-card-title text-navy">10. Canales de Atención</h3>
-                    <p class="legal-text legal-mini-text">Para conciliar la vida laboral de nuestro equipo, os atenderemos encantados vía email o WhatsApp dentro de nuestro horario de tarde. Los mensajes fuera de hora se responderán al día siguiente con el mismo cariño.</p>
+                <div class="content-island legal-island legal-mini-card">
+                    <h3 style="font-family: var(--font-title); font-size: 18px; color: var(--color-navy); margin-bottom: 10px; font-weight: 800;">10. Canales de Atención</h3>
+                    <p class="legal-text" style="font-size: 0.95rem; margin: 0; line-height: 1.6;">Toda gestión académica o administrativa se canalizará vía email o el WhatsApp oficial del centro en horario de atención al público. Se ruega respetar el descanso del personal fuera de dicho horario, garantizando así la desconexión digital de los docentes.</p>
                 </div>
-                <div class="content-island legal-mini-card">
-                    <h3 class="legal-mini-card-title text-navy">11. Objetos Personales</h3>
-                    <p class="legal-text legal-mini-text">Para evitar distracciones y disgustos, recomendamos que no traigan objetos de gran valor (consolas, exceso de dinero). El centro no puede hacerse responsable en caso de pérdida o extravío accidental.</p>
+                <div class="content-island legal-island legal-mini-card">
+                    <h3 style="font-family: var(--font-title); font-size: 18px; color: var(--color-navy); margin-bottom: 10px; font-weight: 800;">11. Objetos de Valor</h3>
+                    <p class="legal-text" style="font-size: 0.95rem; margin: 0; line-height: 1.6;">Centro Futura recomienda no acudir al centro con objetos de valor excesivo. El centro declina toda responsabilidad por la pérdida, extravío o deterioro fortuito de dispositivos electrónicos personales, dinero o prendas de ropa del alumnado.</p>
                 </div>
             </div>
         </section>
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="badge badge--orange legal-badge">12</span>
-                <h2 class="legal-title">Bienestar y Salud Común</h2>
+                <span class="badge badge--orange" style="padding: 6px 12px; font-size: 16px;">12</span>
+                <h2 class="legal-title">Protocolo Sanitario y Responsabilidad</h2>
             </div>
             <div class="legal-text">
-                <p>Si tu hijo/a tiene alguna alergia o condición médica relevante, por favor háznoslo saber por escrito. Asimismo, si presenta síntomas evidentes de enfermedad contagiosa, te pedimos que se recupere tranquilamente en casa para cuidar de su salud y la de todos sus compañeros.</p>
+                <p>Es responsabilidad obligatoria del tutor legal informar por escrito de cualquier condición médica, alergia o tratamiento que deba conocer el profesorado. En caso de síntomas evidentes de enfermedad contagiosa, el alumno no podrá acceder al centro hasta su completa recuperación para salvaguardar la salud del colectivo escolar.</p>
             </div>
         </section>
 
         <section class="content-island legal-island reveal">
             <div class="legal-header-flex">
-                <span class="badge badge--navy legal-badge">13</span>
-                <h2 class="legal-title">Protección de Datos y Privacidad</h2>
+                <span class="badge badge--blue" style="padding: 6px 12px; font-size: 16px; background: var(--color-navy); color: white;">13</span>
+                <h2 class="legal-title">Protección de Datos y Videovigilancia</h2>
             </div>
             <div class="legal-text">
-                <p>De acuerdo con el RGPD europeo y la LOPDGDD, tratamos los datos de tu familia con máxima confidencialidad, usándolos únicamente para gestionar la matrícula y nuestro servicio. Además, para la seguridad de todos, contamos con videovigilancia legal. Tienes todo el control: puedes ejercer tus derechos de acceso o borrado escribiéndonos a <strong>hola@centrofutura.es</strong>.</p>
+                <p>De acuerdo con el RGPD y la LOPDGDD, los datos de carácter personal aquí recogidos serán tratados por Centro Futura para el cumplimiento del servicio. Le informamos que el centro cuenta con sistema de videovigilancia para la protección de personas y bienes, cuyas imágenes se conservan el tiempo legalmente establecido. Puede ejercer sus derechos de acceso, rectificación y supresión mediante comunicación a <strong>hola@centrofutura.es</strong>.</p>
             </div>
         </section>
 
     </div>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<?php 
+// Invocación del pie de página modular
+include 'includes/footer.php'; 
+?>
