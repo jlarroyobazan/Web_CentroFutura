@@ -2,7 +2,7 @@
 /**
  * MOTOR DE MATRÍCULA ELITE - CENTRO FUTURA
  * Arquitectura: PHP Puro con Dompdf
- * Estilo: Bento Grid Apple Premium + Contrato Legal + Logo Tipográfico
+ * Estilo: Bento Grid Apple Premium + Acuerdo Legal + Logo Tipográfico
  */
 
 // Escudo para evitar que advertencias de PHP corrompan el archivo PDF
@@ -30,7 +30,7 @@ $curso_map = [
 $horas_map = [
     '1' => '1 hora semanal (50€ /mes)', '2' => '2 horas semanales (80€ /mes)', '3' => '3 horas semanales (110€ /mes)',
     '4' => '4 horas semanales (140€ /mes)', '5' => '5 horas semanales (170€ /mes)', '6' => '6 horas semanales (200€ /mes)',
-    '7' => '7 horas semanales (230€ /mes)', '8' => '8 horas semanales (260€ /mes)', 'pau' => 'Curso PaU - 10 horas (120€ /curso)'
+    '7' => '7 horas semanales (230€ /mes)', '8' => '8 horas semanales (260€ /mes)', 'pau' => 'Curso PAU - 10 horas (120€ /curso)'
 ];
 $pago_map = [
     'transferencia' => 'Transferencia Bancaria', 'efectivo' => 'Pago en Efectivo'
@@ -72,9 +72,9 @@ $auth_imagen = isset($_POST['auth_imagen']) ? 'SÍ AUTORIZA' : 'NO AUTORIZA';
 $auth_salida = isset($_POST['auth_salida']) ? 'SÍ AUTORIZA' : 'NO AUTORIZA';
 
 $firma_base64 = $_POST['firma_base64'] ?? '';
-$firma_html = $firma_base64 ? "<img src='$firma_base64' style='max-height: 60px; margin-top: 5px;'>" : "<div style='padding:20px; color:#f97316; font-size:10px;'>Firma física pendiente en el centro</div>";
+$firma_html = $firma_base64 ? "<img src='$firma_base64' style='max-height: 60px; margin-top: 5px;'>" : "<div style='padding:20px; color:#ED7D31; font-size:10px;'>Firma digital pendiente</div>";
 
-// 3. ESTRUCTURA HTML & CSS DEL PDF
+// 3. ESTRUCTURA HTML & CSS DEL PDF (Estilos integrados obligatorios para Dompdf)
 $html_pdf = "
 <html>
 <head>
@@ -94,7 +94,8 @@ $html_pdf = "
     .bento-cell-title { font-weight: bold; font-size: 8.5pt; color: #0f172a; margin-bottom: 2px; }
     .bento-cell-desc { font-size: 8pt; color: #64748b; line-height: 1.2; }
     
-    .critical { background-color: #fff7ed; border: 1.2px solid #fdba74; padding: 15px; border-radius: 10px; margin: 12px 0; }
+    .critical { background-color: #f9f0ff; border: 1.2px solid #e9d5ff; padding: 15px; border-radius: 10px; margin: 12px 0; }
+    .critical-title { color: #8e44ad; font-weight:bold; font-size:9pt; margin-bottom:5px; }
     
     .next-steps-box { background-color: #0f172a; color: #ffffff; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 5px solid #ED7D31; }
     .next-steps-title { color: #ED7D31; font-size: 8.5pt; font-weight: bold; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
@@ -182,16 +183,16 @@ $html_pdf = "
             </td>
             <td width='50%' class='bento-cell'>
                 <div class='bento-cell-title'>Preferencia Horaria</div>
-                <div class='bento-cell-desc'>$horario_preferente</div>
+                <div class='bento-cell-desc'>$horario_preferencia</div>
             </td>
         </tr>
     </table>
 </div>
 
 <div class='critical'>
-    <div class='orange' style='font-weight:bold; font-size:9pt; margin-bottom:5px;'>Información de Gabinete / NEE</div>
-    <div style='font-size:8pt; font-weight:bold; color:#9a3412; margin-bottom:4px; text-transform: uppercase;'>$nee_display</div>
-    <div style='font-size:8pt; line-height:1.4; color:#431407;'>$ayuda_alumno</div>
+    <div class='critical-title'>Perfil Neurocognitivo / NEE</div>
+    <div style='font-size:8pt; font-weight:bold; color:#6b21a8; margin-bottom:4px; text-transform: uppercase;'>$nee_display</div>
+    <div style='font-size:8pt; line-height:1.4; color:#4c1d95;'>$ayuda_alumno</div>
 </div>
 
 <div class='section-title'>4. Autorizaciones Legales Concedidas</div>
@@ -215,11 +216,11 @@ $html_pdf = "
 </div>
 
 <div class='next-steps-box'>
-    <div class='next-steps-title'>¿Qué sucede ahora? (Próximos Pasos)</div>
+    <div class='next-steps-title'>Acuerdo confirmado. ¿Qué sucede ahora?</div>
     <div class='next-steps-text'>
-        <strong>1. Evaluación:</strong> Nuestro equipo revisará el perfil en 24h laborables.<br>
-        <strong>2. Bienvenida:</strong> Recibirás un WhatsApp para confirmar el inicio y el horario definitivo.<br>
-        <strong>3. Primer día:</strong> Es vital traer el último boletín de notas.
+        <strong>1. Evaluación y Asignación:</strong> Analizaremos la solicitud y le asignaremos su grupo ideal.<br>
+        <strong>2. Bienvenida Oficial:</strong> Recibiréis un mensaje confirmando el horario definitivo.<br>
+        <strong>3. Primer día:</strong> Aconsejamos que el alumno traiga su agenda y últimas calificaciones.
     </div>
 </div>
 
@@ -228,7 +229,7 @@ $html_pdf = "
     <div style='font-weight: bold; font-size: 7.5pt; color: #0f172a; margin-top: 5px;'>Firma del Tutor/a Legal</div>
 </div>
 <div style='text-align: center; font-size: 6.5pt; color: #94a3b8; margin-top: 5px;'>
-    Firma capturada electrónicamente. IP: $ip_firma.
+    Acuerdo sellado digitalmente. IP de firma: $ip_firma.
 </div>
 
 <div class='page-break'></div>
@@ -241,107 +242,91 @@ $html_pdf = "
             </div>
         </td>
         <td align='right'>
-            <div style='font-weight:bold; font-size:9pt; color:#0f172a;'>CONTRATO DE SERVICIOS</div>
-            <div style='font-size:7pt; color:#94a3b8;'>Anexo a: $id_expediente</div>
+            <div style='font-weight:bold; font-size:9pt; color:#0f172a;'>ACUERDO DE SERVICIOS</div>
+            <div style='font-size:7pt; color:#94a3b8;'>Anexo a expediente: $id_expediente</div>
         </td>
     </tr>
 </table>
 
-<div style='font-size: 11pt; font-weight: bold; color: #0f172a; margin-bottom: 15px;'>Condiciones Generales y Reglamento Interno</div>
+<div style='font-size: 10pt; font-weight: bold; color: #0f172a; margin-bottom: 15px;'>Resumen de Condiciones y Normas de Convivencia</div>
 
 <table class='legal-table'>
     <tr>
         <td class='legal-td'>
             <div class='legal-card' style='border-left: 3px solid #ED7D31;'>
-                <div class='legal-card-title'><span class='num-pill'>01</span> Régimen Económico</div>
+                <div class='legal-card-title'><span class='num-pill'>01</span> Transparencia y Pagos</div>
                 <div class='legal-card-text'>
-                    <strong>1.1. Devengo y Pago:</strong> El servicio se contrata por periodos mensuales. El pago se realizará entre los días 1 y 5 de cada mes. El retraso generará un recargo de 10€ a partir del día 10.<br>
-                    <strong>1.2. Prorrateo:</strong> No se efectuarán reducciones por festivos, vacaciones o inasistencias médicas.<br>
-                    <strong>1.3. Actualización:</strong> El centro puede actualizar cuotas al inicio de cada curso (aviso 30 días).
+                    Para mantener los grupos reducidos, el servicio es mensual. Los cobros se realizan del 1 al 5. Los recibos devueltos o pagos a partir del día 10 generan un recargo de gestión de 10€. Las tarifas son planas anuales (sin compensación por festivos o inasistencia del alumno).
                 </div>
             </div>
 
             <div class='legal-card'>
-                <div class='legal-card-title'><span class='num-pill-dark'>02</span> Bajas y Desistimiento</div>
+                <div class='legal-card-title'><span class='num-pill-dark'>02</span> Pausas de Servicio</div>
                 <div class='legal-card-text'>
-                    La baja debe comunicarse por escrito (email o WhatsApp) antes del <strong>día 25 del mes anterior</strong>. La ausencia de comunicación implica el cargo irrenunciable del mes siguiente. En caso de expulsión, no hay devolución.
+                    Entendemos que las necesidades cambian. Solo pedimos comunicar la baja por escrito antes del día 25 del mes anterior para no emitir el recibo y poder ceder la plaza a otra familia.
                 </div>
             </div>
 
             <div class='legal-card'>
-                <div class='legal-card-title'><span class='num-pill-dark'>03</span> Continuidad Digital</div>
+                <div class='legal-card-title'><span class='num-pill-dark'>03</span> Continuidad Educativa</div>
                 <div class='legal-card-text'>
-                    Ante causas de fuerza mayor (clima, sanidad), se garantiza el servicio en modalidad online. Este cambio temporal no altera la obligación económica del contrato.
+                    Ante situaciones de fuerza mayor (climáticas, etc.), las clases pasarán fluidamente a modalidad de Aula Virtual, garantizando el progreso sin alterar la cuota del servicio.
                 </div>
             </div>
 
             <div class='legal-card'>
-                <div class='legal-card-title'><span class='num-pill-dark'>04</span> Responsabilidad Pedagógica</div>
+                <div class='legal-card-title'><span class='num-pill-dark'>04</span> Compromiso de Éxito</div>
                 <div class='legal-card-text'>
-                    El centro asume una obligación de medios (recursos y docentes). El éxito académico depende del esfuerzo del alumno, declinando el centro responsabilidad sobre resultados de exámenes.
+                    Ofrecemos una obligación de medios (equipo colegiado, método neuroeducativo). Sin embargo, el éxito (notas, EvAU) requiere del esfuerzo ineludible del propio alumno.
                 </div>
             </div>
 
             <div class='legal-card'>
-                <div class='legal-card-title'><span class='num-pill-dark'>05</span> Normas de Convivencia</div>
+                <div class='legal-card-title'><span class='num-pill-dark'>05</span> Convivencia Segura</div>
                 <div class='legal-card-text'>
-                    Se exige respeto absoluto. Queda estrictamente prohibida la grabación de sesiones (ciberconvivencia) o la falta de respeto a docentes, lo cual conlleva expulsión inmediata.
-                </div>
-            </div>
-
-            <div class='legal-card'>
-                <div class='legal-card-title'><span class='num-pill-dark'>06</span> Propiedad Intelectual</div>
-                <div class='legal-card-text'>
-                    Los materiales entregados son propiedad de Centro Futura. Queda prohibida su reproducción o la contratación externa de nuestros docentes por parte de las familias.
+                    Creamos un entorno protegido. No se tolerará el acoso, faltas de respeto, ni la grabación en vídeo/audio a compañeros. El incumplimiento supondrá la baja inmediata del centro.
                 </div>
             </div>
         </td>
         <td class='legal-spacer'></td>
         <td class='legal-td'>
             <div class='legal-card'>
+                <div class='legal-card-title'><span class='num-pill-dark'>06</span> Cuidado de Recursos</div>
+                <div class='legal-card-text'>
+                    Los materiales (esquemas, guías) son propiedad intelectual del centro para uso exclusivo del alumno. Las familias se comprometen a no contratar a nuestros profesores de forma privada.
+                </div>
+            </div>
+
+            <div class='legal-card'>
                 <div class='legal-card-title'><span class='num-pill-dark'>07</span> Seguridad y Recogida</div>
                 <div class='legal-card-text'>
-                    El centro custodia al alumno solo en horario lectivo. Retrasos recurrentes en la recogida (más de 15 min) podrán facturarse a 15€ por fracción como servicio de guardia.
+                    Custodiamos al menor en horario de clase. Rogamos puntualidad en la recogida; retrasos sistemáticos (más de 15 min) obligan a facturar un cargo adicional por custodia.
                 </div>
             </div>
 
             <div class='legal-card'>
-                <div class='legal-card-title'><span class='num-pill-dark'>08</span> Uso de Imagen</div>
+                <div class='legal-card-title'><span class='num-pill-dark'>08</span> Uso de Nuestras Aulas</div>
                 <div class='legal-card-text'>
-                    Sujeto a la autorización marcada en la página 1, se podrán utilizar fotos o vídeos educativos en los canales corporativos del centro velando por el menor.
+                    El centro es el \"tercer educador\". Si el alumno causara daños graves al mobiliario por uso negligente, la familia deberá responsabilizarse de la reparación.
                 </div>
             </div>
 
             <div class='legal-card'>
-                <div class='legal-card-title'><span class='num-pill-dark'>09</span> Cuidado de Instalaciones</div>
+                <div class='legal-card-title'><span class='num-pill-dark'>09</span> Salud y Objetos Personales</div>
                 <div class='legal-card-text'>
-                    El tutor legal deberá sufragar el coste íntegro de reparación o reposición por daños derivados de un uso negligente del mobiliario o material informático por el alumno.
-                </div>
-            </div>
-
-            <div class='legal-card'>
-                <div class='legal-card-title'><span class='num-pill-dark'>10</span> Canales de Atención</div>
-                <div class='legal-card-text'>
-                    Toda gestión se canalizará vía email o WhatsApp oficial. Se garantiza el derecho a la desconexión digital del profesorado fuera de su horario laboral.
-                </div>
-            </div>
-
-            <div class='legal-card'>
-                <div class='legal-card-title'><span class='num-pill-dark'>11 & 12</span> Objetos y Salud</div>
-                <div class='legal-card-text'>
-                    El centro no se responsabiliza de pérdida de dispositivos o dinero. Es obligatorio informar de alergias. Alumnos con enfermedad contagiosa no podrán acceder al local.
+                    Se debe avisar de alergias. Si el menor presenta síntomas contagiosos, debe quedarse en casa. El centro no se responsabiliza de dispositivos electrónicos o dinero perdidos.
                 </div>
             </div>
 
             <div class='legal-card' style='border-left: 3px solid #0f172a;'>
-                <div class='legal-card-title'><span class='num-pill'>13</span> Protección de Datos (RGPD)</div>
+                <div class='legal-card-title'><span class='num-pill'>10</span> Privacidad y RGPD</div>
                 <div class='legal-card-text'>
-                    Datos tratados por Ainhoa Moreno (70427872D) para el servicio formativo. El centro cuenta con videovigilancia sin grabación en aulas. Ejerza sus derechos en hola@centrofutura.es.
+                    Datos custodiados por Ainhoa Moreno (70427872D) exclusivamente para el servicio. Contamos con videovigilancia sin grabación en aulas. Ejerza sus derechos en hola@centrofutura.es.
                 </div>
             </div>
 
-            <div style='margin-top:12px; border: 1px dashed #cbd5e1; background: #ffffff; padding:10px; border-radius: 8px; font-weight:bold; color:#0f172a; font-size: 6.5pt; text-align: center;'>
-                Mediante la firma electrónica en la página 1, el tutor/a legal acepta en su totalidad las cláusulas de este contrato vinculante. Condiciones disponibles en centrofutura.es
+            <div style='margin-top:12px; border: 1px dashed #cbd5e1; background: #ffffff; padding:10px; border-radius: 8px; color:#0f172a; font-size: 6.5pt; text-align: center;'>
+                <strong>Acuerdo en Firme:</strong> Mediante la rúbrica digital en la página anterior, la familia acepta este marco de convivencia. Documento completo disponible en centrofutura.es.
             </div>
         </td>
     </tr>
@@ -351,7 +336,7 @@ $html_pdf = "
 
 // 4. GENERACIÓN SEGURA DEL PDF
 $pdf_output = null;
-$pdf_filename = "Matricula_Futura_" . str_replace(' ', '_', $nombre_alumno . "_" . $apellidos_alumno) . ".pdf";
+$pdf_filename = "Acuerdo_CentroFutura_" . str_replace(' ', '_', $nombre_alumno . "_" . $apellidos_alumno) . ".pdf";
 
 try {
     $options = new Options();
@@ -367,27 +352,30 @@ try {
     error_log("Error generando PDF de matrícula: " . $e->getMessage());
 }
 
-// 5. ENVÍO DE CORREOS (MIME Mixed - Apple Style Email)
+// 5. ENVÍO DE CORREOS (MIME Mixed - Correos amigables estilo "Aliado Familiar")
 $to_academia = "hola@centrofutura.es";
 $to_cliente = $email_notificaciones;
-$subject = "Confirmación de Matrícula: $nombre_alumno $apellidos_alumno";
+$subject = "¡Tu solicitud está en marcha! - Centro Futura";
 $boundary = md5(time());
 
 $headers = "From: Centro Futura <hola@centrofutura.es>\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
 
+// HTML del Correo Electrónico
 $html_email = "
 <div style='font-family: Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #f5f5f7; padding: 20px; border-radius: 12px;'>
     <div style='background: white; padding: 35px; border-radius: 8px; text-align: center; border-top: 4px solid #ED7D31; box-shadow: 0 4px 15px rgba(0,0,0,0.05);'>
-        <h2 style='color: #1c1c28; margin-top: 0; font-size: 24px; font-weight: 800;'>¡Plaza en Revisión!</h2>
-        <p style='color: #424245; font-size: 16px; line-height: 1.6;'>Hemos recibido correctamente la solicitud oficial de plaza para <strong>$nombre_alumno $apellidos_alumno</strong>.</p>
-        <p style='color: #424245; font-size: 16px; line-height: 1.6;'>Adjunto a este correo encontrarás el documento legal en formato PDF con todos los datos que has introducido, tu firma digital y el reglamento interno del centro.</p>
+        <h2 style='color: #1c1c28; margin-top: 0; font-size: 24px; font-weight: 800;'>¡Todo listo para empezar!</h2>
+        <p style='color: #424245; font-size: 16px; line-height: 1.6;'>Hola, acabas de dar el paso más importante hacia la tranquilidad académica de <strong>$nombre_alumno</strong>.</p>
+        <p style='color: #424245; font-size: 16px; line-height: 1.6;'>Hemos recibido vuestros datos correctamente. Adjunto a este correo encontrarás el <strong>Acuerdo de Servicios</strong> en formato PDF, que incluye el resumen de vuestra solicitud y nuestra garantía de calidad.</p>
         
         <div style='background: #fff7ed; border-left: 4px solid #ED7D31; padding: 15px; text-align: left; margin: 25px 0; border-radius: 4px;'>
-            <h3 style='color: #ED7D31; font-size: 14px; margin: 0 0 5px 0; text-transform: uppercase;'>¿Qué sucede ahora?</h3>
-            <p style='margin:0; font-size: 14px; color: #431407; line-height: 1.5;'>Nuestro equipo psicopedagógico revisará el perfil y te escribiremos por WhatsApp en las próximas 24h para confirmarte el horario definitivo y darte la bienvenida al curso.</p>
+            <h3 style='color: #ED7D31; font-size: 14px; margin: 0 0 5px 0; text-transform: uppercase;'>Siguientes Pasos:</h3>
+            <p style='margin:0; font-size: 14px; color: #431407; line-height: 1.5;'>Nuestro equipo evaluará el perfil y os escribiremos por WhatsApp en menos de 24 horas para confirmaros el horario definitivo y daros la bienvenida oficial al curso.</p>
         </div>
+
+        <p style='color: #86868b; font-size: 14px;'>¡Estamos deseando empezar a trabajar juntos!</p>
 
         <div style='margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #86868b;'>
             Expediente: $id_expediente<br>Centro Futura | Av. Pablo Iglesias 89, Rivas-Vaciamadrid

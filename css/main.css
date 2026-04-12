@@ -1,0 +1,14 @@
+/* ==========================================================================
+   SISTEMA DE DISEÑO - CENTRO FUTURA 
+   Archivo Maestro de Importaciones
+   ========================================================================== */
+
+@import "animations.css";
+@import "base_A11Y.css";
+@import "components.css";
+@import "design_tokens.css";
+@import "estilos_extraidos.css";
+@import "layouts_containers.css";
+@import "page_blocks.css";
+@import "responsive.css";
+@import "utilities.css";
