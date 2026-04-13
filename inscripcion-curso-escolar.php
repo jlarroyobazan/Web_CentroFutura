@@ -19,50 +19,50 @@ include 'includes/header.php';
                         <p class="section-description mx-auto max-w-800">Formaliza la matrícula presencial en Rivas Futura. Las plazas en nuestros grupos reducidos se asignan por riguroso orden de recepción.</p>
                     </div>
 
-                    <div class="form-card" style="max-width: 900px; margin: 0 auto 60px; box-shadow: var(--shadow-md); border: 1px solid rgba(0,0,0,0.03); padding: 40px 5vw;">
+                    <div class="form-card form-card-main">
                         
                         <form class="real-form" id="formMatricula" action="procesar-solicitud.php" method="POST">
                             
-                            <div style="display:none; visibility:hidden;">
+                            <div class="hidden">
                                 <label for="website_url">No rellenes esto si eres humano:</label>
                                 <input type="text" id="website_url" name="website_url" value="" tabindex="-1" autocomplete="off">
                             </div>
 
                             <div class="input-group floating-label-group mb-40">
-                                <input type="email" id="email_notificaciones" name="email_notificaciones" placeholder=" " required style="background: white; border: 1px solid #d2d2d7;">
+                                <input type="email" id="email_notificaciones" name="email_notificaciones" placeholder=" " required class="input-white">
                                 <label for="email_notificaciones">Correo electrónico para notificaciones *</label>
                             </div>
 
-                            <div style="background: var(--bg-body); padding: 30px; border-radius: var(--radius-md); margin-bottom: 30px; border: 1px solid rgba(0,0,0,0.02);">
-                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px;">
-                                    <span class="badge badge--orange" style="padding: 4px 10px;">1</span>
-                                    <h3 style="font-family: var(--font-title); font-size: 20px; color: var(--color-navy); margin: 0;">Datos del Alumno/a</h3>
+                            <div class="form-section-box">
+                                <div class="form-section-header">
+                                    <span class="badge badge--orange badge-sm">1</span>
+                                    <h3 class="form-section-title">Datos del Alumno/a</h3>
                                 </div>
                                 
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0 20px;">
+                                <div class="form-grid-2col">
                                     <div class="input-group floating-label-group">
-                                        <input type="text" id="nombre_alumno" name="nombre_alumno" placeholder=" " required style="background: white;">
+                                        <input type="text" id="nombre_alumno" name="nombre_alumno" placeholder=" " required class="bg-white">
                                         <label for="nombre_alumno">Nombre *</label>
                                     </div>
                                     <div class="input-group floating-label-group">
-                                        <input type="text" id="apellidos_alumno" name="apellidos_alumno" placeholder=" " required style="background: white;">
+                                        <input type="text" id="apellidos_alumno" name="apellidos_alumno" placeholder=" " required class="bg-white">
                                         <label for="apellidos_alumno">Apellidos *</label>
                                     </div>
                                 </div>
 
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0 20px;">
+                                <div class="form-grid-2col">
                                     <div class="input-group floating-label-group">
-                                        <input type="email" id="email_alumno" name="email_alumno" placeholder=" " style="background: white;">
+                                        <input type="email" id="email_alumno" name="email_alumno" placeholder=" " class="bg-white">
                                         <label for="email_alumno">Correo del alumno (opcional)</label>
                                     </div>
                                     <div class="input-group floating-label-group">
-                                        <input type="text" id="centro_educativo" name="centro_educativo" placeholder=" " required style="background: white;">
+                                        <input type="text" id="centro_educativo" name="centro_educativo" placeholder=" " required class="bg-white">
                                         <label for="centro_educativo">Centro Educativo *</label>
                                     </div>
                                 </div>
 
                                 <div class="input-group floating-label-group">
-                                    <select id="curso_escolar" name="curso_escolar" required style="background: white;">
+                                    <select id="curso_escolar" name="curso_escolar" required class="bg-white">
                                         <option value="" disabled selected hidden></option>
                                         <option value="primaria">Primaria</option>
                                         <option value="1eso">1º ESO</option>
@@ -77,65 +77,65 @@ include 'includes/header.php';
                                     <div class="select-arrow" aria-hidden="true">▼</div>
                                 </div>
 
-                                <div style="background: white; padding: 25px; border-radius: var(--radius-sm); margin-bottom: 25px; border: 1px solid rgba(0,0,0,0.05);">
-                                    <p style="font-family: var(--font-title); font-weight: 800; font-size: 15px; color: var(--color-purple); margin-bottom: 15px;">Indique si presenta Necesidades Educativas Especiales (NEE):</p>
-                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+                                <div class="nee-checkbox-box">
+                                    <p class="nee-checkbox-title">Indique si presenta Necesidades Educativas Especiales (NEE):</p>
+                                    <div class="nee-checkbox-grid">
                                         <?php 
                                         $nees = ["TDAH", "Dislexia", "Dificultades de aprendizaje", "TEA", "TEL / TDL", "Altas capacidades (AACC)", "Retraso madurativo", "Discalculia", "Disgrafía", "Otro"];
                                         foreach($nees as $nee): ?>
-                                        <label style="display: flex; align-items: center; gap: 10px; font-size: 14px; cursor: pointer; color: var(--color-navy); font-weight: 500;">
-                                            <input type="checkbox" name="nee[]" value="<?php echo $nee; ?>" style="accent-color: var(--color-purple); width: 18px; height: 18px; cursor: pointer;"> <?php echo $nee; ?>
+                                        <label class="nee-checkbox-label">
+                                            <input type="checkbox" name="nee[]" value="<?php echo $nee; ?>" class="nee-checkbox-input"> <?php echo $nee; ?>
                                         </label>
                                         <?php endforeach; ?>
                                     </div>
                                 </div>
 
                                 <div class="input-group floating-label-group mb-0">
-                                    <textarea id="ayuda_alumno" name="ayuda_alumno" placeholder=" " style="min-height: 100px; background: white;"></textarea>
+                                    <textarea id="ayuda_alumno" name="ayuda_alumno" placeholder=" " class="textarea-md"></textarea>
                                     <label for="ayuda_alumno">¿Cómo podemos ayudar mejor al alumno? (Aspectos clave)</label>
                                 </div>
                             </div>
 
-                            <div style="background: var(--bg-body); padding: 30px; border-radius: var(--radius-md); margin-bottom: 30px; border: 1px solid rgba(0,0,0,0.02);">
-                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px;">
-                                    <span class="badge badge--orange" style="padding: 4px 10px;">2</span>
-                                    <h3 style="font-family: var(--font-title); font-size: 20px; color: var(--color-navy); margin: 0;">Contactos Familiares</h3>
+                            <div class="form-section-box">
+                                <div class="form-section-header">
+                                    <span class="badge badge--orange badge-sm">2</span>
+                                    <h3 class="form-section-title">Contactos Familiares</h3>
                                 </div>
                                 
-                                <p style="font-size: 14px; color: var(--color-orange); font-weight: 700; margin-bottom: 15px;">Contacto Principal (Tutor 1) *</p>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0 20px; margin-bottom: 20px;">
+                                <p class="form-subsection-title">Contacto Principal (Tutor 1) *</p>
+                                <div class="form-grid-2col mb-20">
                                     <div class="input-group floating-label-group mb-0">
-                                        <input type="text" id="nombre_tutor1" name="nombre_tutor1" placeholder=" " required style="background: white;">
+                                        <input type="text" id="nombre_tutor1" name="nombre_tutor1" placeholder=" " required class="input-white">
                                         <label for="nombre_tutor1">Nombre y Apellidos *</label>
                                     </div>
                                     <div class="input-group floating-label-group mb-0 mt-20-mobile">
-                                        <input type="tel" id="tlf_tutor1" name="tlf_tutor1" placeholder=" " required style="background: white;">
+                                        <input type="tel" id="tlf_tutor1" name="tlf_tutor1" placeholder=" " required class="input-white">
                                         <label for="tlf_tutor1">Teléfono móvil *</label>
                                     </div>
                                 </div>
 
-                                <p style="font-size: 14px; color: #86868b; font-weight: 700; margin-bottom: 15px;">Contacto Alternativo (Tutor 2 - Opcional)</p>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0 20px;">
+                                <p class="form-subsection-title-muted">Contacto Alternativo (Tutor 2 - Opcional)</p>
+                                <div class="form-grid-2col">
                                     <div class="input-group floating-label-group mb-0">
-                                        <input type="text" id="nombre_tutor2" name="nombre_tutor2" placeholder=" " style="background: white;">
+                                        <input type="text" id="nombre_tutor2" name="nombre_tutor2" placeholder=" " class="input-white">
                                         <label for="nombre_tutor2">Nombre y Apellidos</label>
                                     </div>
                                     <div class="input-group floating-label-group mb-0 mt-20-mobile">
-                                        <input type="tel" id="tlf_tutor2" name="tlf_tutor2" placeholder=" " style="background: white;">
+                                        <input type="tel" id="tlf_tutor2" name="tlf_tutor2" placeholder=" " class="input-white">
                                         <label for="tlf_tutor2">Teléfono móvil</label>
                                     </div>
                                 </div>
                             </div>
 
-                            <div style="background: var(--bg-body); padding: 30px; border-radius: var(--radius-md); margin-bottom: 30px; border: 1px solid rgba(0,0,0,0.02);">
-                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px;">
-                                    <span class="badge badge--orange" style="padding: 4px 10px;">3</span>
-                                    <h3 style="font-family: var(--font-title); font-size: 20px; color: var(--color-navy); margin: 0;">Detalles de la Inscripción</h3>
+                            <div class="form-section-box">
+                                <div class="form-section-header">
+                                    <span class="badge badge--orange badge-sm">3</span>
+                                    <h3 class="form-section-title">Detalles de la Inscripción</h3>
                                 </div>
                                 
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0 20px;">
+                                <div class="form-grid-2col">
                                     <div class="input-group floating-label-group">
-                                        <select id="horas_semanales" name="horas_semanales" required style="background: white;">
+                                        <select id="horas_semanales" name="horas_semanales" required class="bg-white">
                                             <option value="" disabled selected hidden></option>
                                             <option value="1">1 hora semanal (50€ /mes)</option>
                                             <option value="2">2 horas semanales (80€ /mes)</option>
@@ -152,7 +152,7 @@ include 'includes/header.php';
                                     </div>
 
                                     <div class="input-group floating-label-group">
-                                        <select id="forma_pago" name="forma_pago" required style="background: white;">
+                                        <select id="forma_pago" name="forma_pago" required class="bg-white">
                                             <option value="" disabled selected hidden></option>
                                             <option value="transferencia">Transferencia Bancaria</option>
                                             <option value="efectivo">Pago en Efectivo</option>
@@ -163,78 +163,78 @@ include 'includes/header.php';
                                 </div>
 
                                 <div class="input-group floating-label-group">
-                                    <input type="text" id="horario_preferencia" name="horario_preferencia" placeholder=" " required style="background: white;">
+                                    <input type="text" id="horario_preferencia" name="horario_preferencia" placeholder=" " required class="input-white">
                                     <label for="horario_preferencia">Horario y días de preferencia *</label>
                                 </div>
 
                                 <div class="input-group floating-label-group mb-0">
-                                    <input type="text" id="asignaturas" name="asignaturas" placeholder=" " required style="background: white;">
+                                    <input type="text" id="asignaturas" name="asignaturas" placeholder=" " required class="input-white">
                                     <label for="asignaturas">Asignaturas a reforzar *</label>
                                 </div>
                             </div>
 
-                            <div style="background: var(--bg-body); padding: 30px; border-radius: var(--radius-md); margin-bottom: 40px; border: 1px solid rgba(0,0,0,0.02);">
-                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px;">
-                                    <span class="badge badge--orange" style="padding: 4px 10px;">4</span>
-                                    <h3 style="font-family: var(--font-title); font-size: 20px; color: var(--color-navy); margin: 0;">Autorizaciones</h3>
+                            <div class="form-section-box mb-40">
+                                <div class="form-section-header">
+                                    <span class="badge badge--orange badge-sm">4</span>
+                                    <h3 class="form-section-title">Autorizaciones</h3>
                                 </div>
                                 
-                                <label style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; cursor: pointer; font-size: 15px; color: var(--color-text);">
-                                    <input type="checkbox" name="auth_whatsapp" value="si" style="margin-top: 4px; width: 20px; height: 20px; accent-color: var(--color-orange); cursor: pointer;">
+                                <label class="auth-checkbox-label">
+                                    <input type="checkbox" name="auth_whatsapp" value="si" class="auth-checkbox-input">
                                     <span><strong>CONSIENTO</strong> el uso de WhatsApp como canal de comunicación para recibir avisos sobre eventos y actualizaciones de los servicios.</span>
                                 </label>
 
-                                <label style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; cursor: pointer; font-size: 15px; color: var(--color-text);">
-                                    <input type="checkbox" name="auth_imagen" value="si" style="margin-top: 4px; width: 20px; height: 20px; accent-color: var(--color-orange); cursor: pointer;">
+                                <label class="auth-checkbox-label">
+                                    <input type="checkbox" name="auth_imagen" value="si" class="auth-checkbox-input">
                                     <span><strong>AUTORIZO</strong> la cesión de los derechos de imagen del alumno para fines informativos o promocionales en canales oficiales.</span>
                                 </label>
 
-                                <label style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; cursor: pointer; font-size: 15px; color: var(--color-text);">
-                                    <input type="checkbox" name="auth_salida" value="si" style="margin-top: 4px; width: 20px; height: 20px; accent-color: var(--color-orange); cursor: pointer;">
+                                <label class="auth-checkbox-label">
+                                    <input type="checkbox" name="auth_salida" value="si" class="auth-checkbox-input">
                                     <span><strong>AUTORIZO</strong> a mi hijo/a a abandonar las instalaciones por sus propios medios al finalizar las clases, eximiendo al centro de responsabilidad.</span>
                                 </label>
 
-                                <div style="margin-top: 30px; padding-top: 25px; border-top: 1px solid rgba(0,0,0,0.05);">
-                                    <label style="display: flex; align-items: flex-start; gap: 12px; cursor: pointer; font-size: 15px; color: var(--color-navy); font-weight: 700;">
-                                        <input type="checkbox" name="acepta_reglamento" value="si" required style="margin-top: 4px; width: 22px; height: 22px; accent-color: var(--color-orange); cursor: pointer;">
+                                <div class="terms-box">
+                                    <label class="terms-label">
+                                        <input type="checkbox" name="acepta_reglamento" value="si" required class="terms-input">
                                         <span>He LEÍDO y ACEPTO en su totalidad los Términos de Contratación y el Reglamento Interno (incluyendo política de pagos y bajas). *</span>
                                     </label>
                                 </div>
                             </div>
 
-                            <div style="margin-bottom: 40px; text-align: center;">
-                                <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
-                                    <span class="badge badge--orange" style="padding: 4px 10px;">5</span>
-                                    <h3 style="font-family: var(--font-title); font-size: 22px; color: var(--color-navy); margin: 0; text-transform: uppercase; letter-spacing: 1px;">Firma Digital del Tutor/a *</h3>
+                            <div class="mb-40 text-center">
+                                <div class="flex items-center justify-center gap-10 mb-15">
+                                    <span class="badge badge--orange badge-sm">5</span>
+                                    <h3 class="signature-title">Firma Digital del Tutor/a *</h3>
                                 </div>
-                                <p style="font-size: 14px; color: #86868b; margin-bottom: 20px;">Firme dentro del cuadro usando su ratón o deslizando el dedo en su móvil.</p>
+                                <p class="signature-subtitle">Firme dentro del cuadro usando su ratón o deslizando el dedo en su móvil.</p>
                                 
-                                <div style="background: white; border: 2px solid #d2d2d7; border-radius: var(--radius-sm); display: inline-block; position: relative; max-width: 100%; box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);">
-                                    <canvas id="firmaCanvas" width="400" height="200" style="max-width: 100%; cursor: crosshair; touch-action: none; border-radius: var(--radius-sm);"></canvas>
-                                    <button type="button" id="limpiarFirma" style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.05); border: none; padding: 6px 14px; border-radius: 100px; font-size: 13px; font-weight: 700; color: var(--color-navy); cursor: pointer; transition: 0.3s;">Borrar firma</button>
+                                <div class="signature-canvas-wrapper">
+                                    <canvas id="firmaCanvas" width="400" height="200" class="signature-canvas"></canvas>
+                                    <button type="button" id="limpiarFirma" class="signature-clear-btn">Borrar firma</button>
                                 </div>
                                 <input type="hidden" id="firmaImagen" name="firma_base64" required>
                                 
-                                <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 15px; color: var(--color-wa); font-weight: 700; font-size: 13px;">
+                                <div class="signature-secure-text">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                                     Proceso cifrado y 100% seguro
                                 </div>
                             </div>
     
-                            <button type="submit" class="btn-primary btn-submit" style="font-size: 18px; width: 100%; margin-bottom: 30px; padding: 22px; box-shadow: 0 10px 30px rgba(237, 125, 49, 0.3);">
+                            <button type="submit" class="btn-primary btn-submit btn-submit-main">
                                 Confirmar Matrícula y Asegurar Plaza
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ml-8" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             </button>
 
-                            <div style="background-color: var(--bg-body); padding: 25px; border-radius: var(--radius-sm); border: 1px solid rgba(0,0,0,0.03); text-align: left;">
-                                <h4 style="font-family: var(--font-title); font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; color: var(--color-navy); margin-bottom: 10px;">
+                            <div class="rgpd-info-box">
+                                <h4 class="rgpd-info-title">
                                     Información Básica sobre Protección de Datos (RGPD)
                                 </h4>
-                                <div style="font-size: 11px; line-height: 1.6; color: #86868b;">
-                                    <p style="margin-bottom: 8px;"><strong>Responsable:</strong> Ainhoa Moreno Garrido (Centro Futura). NIF: 70427872D.</p>
-                                    <p style="margin-bottom: 8px;"><strong>Finalidad:</strong> Gestión de la solicitud de plaza, matriculación y relación académica/administrativa. Emisión de comunicaciones operativas.</p>
-                                    <p style="margin-bottom: 8px;"><strong>Legitimación y Destinatarios:</strong> Ejecución de un contrato formativo. No se cederán datos a terceros salvo obligación legal expresa.</p>
-                                    <p><strong>Derechos:</strong> Puede ejercer sus derechos de acceso, rectificación, supresión y portabilidad enviando un correo a <a href="mailto:hola@centrofutura.es" style="color: var(--color-orange); text-decoration: none;">hola@centrofutura.es</a>.</p>
+                                <div class="rgpd-info-text">
+                                    <p class="mb-8"><strong>Responsable:</strong> Ainhoa Moreno Garrido (Centro Futura). NIF: 70427872D.</p>
+                                    <p class="mb-8"><strong>Finalidad:</strong> Gestión de la solicitud de plaza, matriculación y relación académica/administrativa. Emisión de comunicaciones operativas.</p>
+                                    <p class="mb-8"><strong>Legitimación y Destinatarios:</strong> Ejecución de un contrato formativo. No se cederán datos a terceros salvo obligación legal expresa.</p>
+                                    <p><strong>Derechos:</strong> Puede ejercer sus derechos de acceso, rectificación, supresión y portabilidad enviando un correo a <a href="mailto:hola@centrofutura.es" class="link-orange-no-underline">hola@centrofutura.es</a>.</p>
                                 </div>
                             </div>
                             
@@ -246,12 +246,6 @@ include 'includes/header.php';
 
         </div> 
     </main>
-
-    <style>
-        @media (max-width: 600px) {
-            .mt-20-mobile { margin-top: 20px !important; }
-        }
-    </style>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -319,8 +313,8 @@ include 'includes/header.php';
                     e.preventDefault();
                     alert('Por favor, firme el documento digitalmente en el recuadro indicado para poder asegurar la plaza.');
                     canvas.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    canvas.style.boxShadow = "0 0 0 3px var(--color-orange)";
-                    setTimeout(() => canvas.style.boxShadow = "inset 0 2px 5px rgba(0,0,0,0.02)", 2000);
+                    canvas.classList.add('error-pulse');
+                    setTimeout(() => canvas.classList.remove('error-pulse'), 2000);
                 }
             });
         });

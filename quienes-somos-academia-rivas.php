@@ -35,22 +35,22 @@ include 'includes/header.php';
                 <section class="island-section">
                     <div class="features-split">
                         <div class="features-split__visual">
-                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Detalle de nuestras aulas libres de ruidos visuales en Rivas" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 4px solid white;">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Detalle de nuestras aulas libres de ruidos visuales en Rivas" class="w-100 rounded-lg shadow-md border-white-4">
                         </div>
                         <div class="features-split__info">
                             <span class="badge badge--purple mb-15">NUESTRA HISTORIA</span>
-                            <h2 class="section-title" style="text-align: left;">Nacimos de una <span class="text-purple">necesidad real</span></h2>
+                            <h2 class="section-title text-left">Nacimos de una <span class="text-purple">necesidad real</span></h2>
                             <p class="section-description mb-20">Hace más de 10 años, notamos un patrón doloroso en Rivas Vaciamadrid: niños brillantes perdiendo su autoestima porque no encajaban en la enseñanza estándar. Las academias de la zona ofrecían "hacer deberes", pero nadie trataba la raíz clínica y pedagógica del problema.</p>
                             <p class="section-description mb-30">Decidimos crear el espacio que nosotros mismos hubiéramos querido como padres y alumnos: un lugar donde la <strong>neuroeducación y el rigor clínico</strong> se dieran la mano con la empatía absoluta. Hoy, nuestro mayor orgullo no son solo las notas, sino verlos entrar por la puerta sonriendo y seguros de sí mismos.</p>
                             
                             <div class="hero-premium__trust mt-20">
                                 <div class="trust-icons-stack" aria-hidden="true">
-                                    <div style="background: var(--color-purple); color: white;">🧠</div>
-                                    <div style="background: var(--color-orange); color: white; margin-left: -12px;">❤️</div>
+                                    <div class="bg-purple text-white">🧠</div>
+                                    <div class="bg-orange text-white ml-neg-12">❤️</div>
                                 </div>
-                                <div style="display: flex; flex-direction: column;">
-                                    <span style="font-family: var(--font-title); font-size: 15px; font-weight: 800; color: var(--color-navy); line-height: 1.2;">Más de 500 familias</span>
-                                    <span style="font-size: 12px; font-weight: 500; color: var(--color-text);">han recuperado la tranquilidad</span>
+                                <div class="trust-text-stack">
+                                    <span class="trust-text-title">Más de 500 familias</span>
+                                    <span class="trust-text-subtitle">han recuperado la tranquilidad</span>
                                 </div>
                             </div>
                         </div>
@@ -90,15 +90,15 @@ include 'includes/header.php';
                 </section>
             </div>
 
-            <div class="content-island content-island--dark reveal" style="background-color: var(--color-navy); padding-top: 80px; padding-bottom: 80px;">
+            <div class="content-island content-island--dark reveal bg-navy py-80">
                 <section class="island-section text-center">
                     <span class="badge badge--orange mb-15">COMPROMISO LOCAL</span>
-                    <h2 class="section-title mb-20" style="color: var(--color-white);">Referentes educativos en <br><span class="text-orange">Rivas Vaciamadrid</span></h2>
-                    <div class="mx-auto max-w-800 text-left mt-40" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 40px; border-radius: var(--radius-lg); backdrop-filter: blur(10px);">
-                        <p style="color: #b8b8c5; font-size: 16px; line-height: 1.7; margin-bottom: 15px;">
+                    <h2 class="section-title mb-20 text-white">Referentes educativos en <br><span class="text-orange">Rivas Vaciamadrid</span></h2>
+                    <div class="mx-auto max-w-800 text-left mt-40 glass-panel-dark">
+                        <p class="glass-panel-text-light">
                             Elegir Centro Futura significa apostar por una institución profundamente arraigada en <strong>Rivas Futura</strong>. Conocemos de primera mano la realidad de los colegios e institutos de nuestra ciudad, lo que nos permite ofrecer un apoyo escolar perfectamente alineado con las exigencias académicas locales.
                         </p>
-                        <p style="color: #b8b8c5; font-size: 16px; line-height: 1.7; margin-bottom: 0;">
+                        <p class="glass-panel-text-light m-0">
                             Nuestra misión es democratizar el acceso a una psicopedagogía de élite, demostrando que no hace falta salir de Rivas para encontrar un gabinete privado capaz de transformar el diagnóstico de TDAH, Dislexia o TEA en una historia de éxito y superación.
                         </p>
                     </div>
@@ -114,7 +114,7 @@ include 'includes/header.php';
                     </div>
 
                     <div class="team-grid" role="list">
-                        <div class="team-card glass-effect text-center" role="listitem" style="border-top: 4px solid var(--color-purple);">
+                        <div class="team-card glass-effect text-center border-t-purple" role="listitem">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Retrato de Elena Martínez" class="team-avatar" loading="lazy">
                             <h4 class="team-name">Elena Martínez</h4>
                             <p class="team-role">Directora | Pedagoga Colegiada</p>
@@ -136,11 +136,11 @@ include 'includes/header.php';
                 </section>
             </div>
 
-            <div class="cta-banner reveal mt-60 mb-40" style="background: linear-gradient(135deg, var(--color-orange), #ff9858); box-shadow: 0 20px 40px rgba(237, 125, 49, 0.2);">
+            <div class="cta-banner reveal mt-60 mb-40 bg-gradient-orange">
                 <div class="cta-banner__content">
-                    <h2 style="font-family: var(--font-title); font-size: 32px; color: var(--color-white); font-weight: 900; margin-bottom: 15px;">¿Quieres conocernos en persona?</h2>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Ven a ver nuestras instalaciones y toma un café con nuestra directora. Te escucharemos sin prisas, evaluaremos vuestro caso y te propondremos la mejor solución sin ningún compromiso.</p>
-                    <a href="contacto.php" class="btn-primary" aria-label="Reserva tu cita presencial gratuita en Centro Futura" style="background: var(--color-white); color: var(--color-orange); box-shadow: 0 10px 20px rgba(0,0,0,0.15);">Reservar mi café y visita gratuita</a>
+                    <h2 class="cta-banner__title">¿Quieres conocernos en persona?</h2>
+                    <p class="cta-banner__text">Ven a ver nuestras instalaciones y toma un café con nuestra directora. Te escucharemos sin prisas, evaluaremos vuestro caso y te propondremos la mejor solución sin ningún compromiso.</p>
+                    <a href="contacto.php" class="btn-primary btn-white-orange" aria-label="Reserva tu cita presencial gratuita en Centro Futura">Reservar mi café y visita gratuita</a>
                 </div>
             </div>
         </div>

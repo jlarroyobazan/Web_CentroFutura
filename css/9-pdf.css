@@ -1,0 +1,61 @@
+/* =========================================
+   9. STYLES FOR PDF GENERATION (Dompdf)
+   ========================================= */
+@page { margin: 10mm 15mm; background-color: #ffffff; }
+body { font-family: 'Helvetica', 'Arial', sans-serif; color: #1e293b; font-size: 9pt; line-height: 1.4; background-color: #ffffff; margin: 0; padding: 0; }
+
+.orange { color: #ED7D31; }
+.navy { color: #1e293b; }
+.header { width: 100%; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-bottom: 20px; }
+.badge { background-color: #0f172a; color: #ffffff; padding: 4px 10px; border-radius: 8px; font-size: 8pt; font-weight: bold; }
+
+.section-title { font-size: 7.5pt; font-weight: bold; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px; margin: 20px 0 8px 5px; }
+
+.bento-container { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; background-color: #ffffff; width: 100%; margin-bottom: 12px; }
+.bento-cell { padding: 12px 15px; border-bottom: 1px solid #f1f5f9; background-color: #ffffff; }
+.bento-cell-title { font-weight: bold; font-size: 8.5pt; color: #0f172a; margin-bottom: 2px; }
+.bento-cell-desc { font-size: 8pt; color: #64748b; line-height: 1.2; }
+
+.critical { background-color: #fff7ed; border: 1.2px solid #fdba74; padding: 15px; border-radius: 10px; margin: 12px 0; }
+
+.next-steps-box { background-color: #0f172a; color: #ffffff; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 5px solid #ED7D31; }
+.next-steps-title { color: #ED7D31; font-size: 8.5pt; font-weight: bold; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
+.next-steps-text { font-size: 8pt; line-height: 1.5; opacity: 0.95; }
+
+.signature-box { margin: 0 auto; width: 280px; height: 90px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; text-align: center; }
+
+.page-break { page-break-before: always; }
+.legal-table { width: 100%; border-collapse: collapse; margin-top: 5px; }
+.legal-td { width: 48%; vertical-align: top; }
+.legal-spacer { width: 4%; }
+
+.legal-card { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; }
+.legal-card-title { font-size: 7.5pt; font-weight: bold; color: #0f172a; margin-bottom: 4px; text-transform: uppercase; }
+.legal-card-text { font-size: 6.5pt; color: #475569; line-height: 1.4; text-align: justify; }
+.num-pill { background-color: #ED7D31; color: white; padding: 1px 5px; border-radius: 4px; font-size: 6pt; margin-right: 4px; display: inline-block; }
+.num-pill-dark { background-color: #0f172a; color: white; padding: 1px 5px; border-radius: 4px; font-size: 6pt; margin-right: 4px; display: inline-block; }
+
+.firma-img { max-height: 60px; margin-top: 5px; }
+.firma-pending { padding: 20px; color: #f97316; font-size: 10pt; }
+.pdf-logo-container { font-size: 19pt; letter-spacing: -0.5px; }
+.pdf-logo-navy { color: #1e293b; font-weight: normal; }
+.pdf-logo-orange { color: #ED7D31; font-weight: bold; }
+.pdf-meta-text { font-size: 7pt; color: #94a3b8; font-weight: bold; margin-top: 5px; display: block;}
+.bento-container-highlight { background-color: #f8fafc; border-color: #f1f5f9; margin-bottom: 15px; }
+.bento-cell-highlight { padding: 15px; background-color: #f8fafc; }
+.pdf-student-name { font-size: 18pt; font-weight: bold; color: #0f172a; line-height: 1.1; margin-bottom: 6px; }
+.pdf-divider { margin: 0 5px; }
+.pdf-student-meta { font-size: 9.5pt; color: #64748b; font-weight: bold; letter-spacing: 0.3px; }
+.pdf-border-right { border-right: 1px solid #f1f5f9; }
+.pdf-critical-title { font-weight: bold; font-size: 9pt; margin-bottom: 5px; }
+.pdf-critical-subtitle { font-size: 8pt; font-weight: bold; color: #9a3412; margin-bottom: 4px; text-transform: uppercase; }
+.pdf-critical-text { font-size: 8pt; line-height: 1.4; color: #431407; }
+.pdf-signature-label { font-weight: bold; font-size: 7.5pt; color: #0f172a; margin-top: 5px; }
+.pdf-signature-meta { text-align: center; font-size: 6.5pt; color: #94a3b8; margin-top: 5px; }
+.pdf-logo-container-sm { font-size: 15pt; letter-spacing: -0.5px; }
+.pdf-contract-title { font-weight: bold; font-size: 9pt; color: #0f172a; }
+.pdf-contract-meta { font-size: 7pt; color: #94a3b8; }
+.pdf-contract-header { font-size: 11pt; font-weight: bold; color: #0f172a; margin-bottom: 15px; }
+.pdf-card-border-orange { border-left: 3px solid #ED7D31; }
+.pdf-card-border-navy { border-left: 3px solid #0f172a; }
+.pdf-contract-footer { margin-top: 12px; border: 1px dashed #cbd5e1; background: #ffffff; padding: 10px; border-radius: 8px; font-weight: bold; color: #0f172a; font-size: 6.5pt; text-align: center; }

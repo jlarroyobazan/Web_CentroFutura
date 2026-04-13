@@ -1,0 +1,74 @@
+/* =========================================
+   8. RESPONSIVE (Media Queries Corregidas)
+   ========================================= */
+
+/* 8.1 Regla para el Botón Sticky (Solo Móvil) */
+.mobile-sticky-cta {
+    display: none; /* Oculto en PC por defecto */
+}
+
+@media (max-width: 950px) {
+    .mobile-menu-btn { display: block; }
+    .header-inner { position: relative; }
+    /* Header & Nav */
+    .main-nav { display: none; }
+    .main-nav.nav-open { display: flex !important; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(245, 245, 247, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.05); align-items: stretch; gap: 15px; z-index: 1000; }
+    .main-nav.nav-open > a { padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05); width: 100%; }
+    .header-inner .btn-primary { display: none; }
+    
+    /* Heros */
+    .hero-premium__container { display: flex; flex-direction: column; gap: 50px; text-align: center; }
+    .hero-premium__visual { order: -1; width: 100%; }
+    .hero-premium__title { align-items: center; margin-top: -30px; }
+    
+    /* Layouts y Contenedores */
+    .features-split, .contact-premium-wrapper { grid-template-columns: 1fr; text-align: center; }
+    .content-island { margin: 20px 0; border-radius: 40px; padding: 60px 0; }
+    
+    /* Grids a 1 o 2 columnas en Tablet */
+    .etapas-grid, .team-grid, .pricing-grid, .blog-grid, .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .counters__grid, .value-bar-grid { grid-template-columns: repeat(2, 1fr); }
+    .blog-featured { grid-template-columns: 1fr; }
+    
+    .nee-card--wide, .nee-card--narrow { grid-column: span 12; }
+    .protocol-grid, .onboarding-grid { grid-template-columns: 1fr; }
+    
+    /* Footer & Sticky CTA */
+    .footer-island { margin-bottom: 80px; }
+    .mobile-sticky-cta { display: block; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999; }
+}
+
+@media (min-width: 951px) {
+    .etapas-grid, .team-grid, .pricing-grid, .blog-grid, .steps-grid { grid-template-columns: repeat(3, 1fr); }
+    .counters__grid, .value-bar-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .section-title { font-size: 32px; }
+    .etapas-grid, .team-grid, .pricing-grid, .counters__grid, .steps-grid, .blog-grid, .value-bar-grid { grid-template-columns: 1fr; }
+    .whatsapp-float { bottom: 100px; }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes de tipografía fluida para evitar títulos rotos */
+    .hero-premium__title { font-size: clamp(32px, 8vw, 42px) !important; line-height: 1.15; }
+    .section-title { font-size: clamp(26px, 7vw, 32px) !important; line-height: 1.2; }
+    
+    /* Reducción de espacios muertos en móvil */
+    .mt-80 { margin-top: 45px !important; }
+    .mb-50 { margin-bottom: 30px !important; }
+    .island-section { padding: 40px 20px !important; }
+    .seo-block { padding-top: 40px !important; }
+    
+    /* Reestructuración de elementos para que no se aplasten */
+    .contact-premium-wrapper { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .hero-premium__actions { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .form-grid-mobile { grid-template-columns: 1fr !important; } /* Fuerza los campos a 1 columna en móvil */
+}
+
+/* 8.3 Ajustes para Artículos de Blog */
+@media (max-width: 600px) {
+    .article-body { font-size: 17px; }
+    .author-box { flex-direction: column; text-align: center; }
+    .mt-20-mobile { margin-top: 20px !important; }
+}

@@ -28,16 +28,16 @@ $articulos = [
 
     <main>
         <section class="hero-premium reveal">
-            <div class="hero-premium__container page-wrapper" style="grid-template-columns: 1fr; text-align: center;">
-                <div class="hero-premium__content" style="align-items: center; max-width: 800px; margin: 0 auto;">
+            <div class="hero-premium__container page-wrapper hero-container-center">
+                <div class="hero-premium__content hero-content-center">
                     <div class="mb-20 stagger-1">
                         <span class="badge badge--orange">RECURSOS PARA FAMILIAS</span>
                     </div>
-                    <h1 class="hero-premium__title" style="align-items: center;">
+                    <h1 class="hero-premium__title items-center">
                         <span class="title-pill stagger-2">El blog de</span>
                         <span class="title-pill stagger-3"><span class="text-orange">Centro Futura</span></span>
                     </h1>
-                    <div class="hero-premium__text-box stagger-4" style="text-align: center; max-width: 700px;">
+                    <div class="hero-premium__text-box stagger-4 hero-text-box-center">
                         <p class="hero-premium__text">
                             Guías prácticas, neuroeducación y consejos honestos para ayudar a tus hijos a gestionar su tiempo, mejorar sus notas y recuperar la confianza.
                         </p>
@@ -67,8 +67,8 @@ $articulos = [
                             <img src="<?php echo $post['imagen']; ?>" alt="<?php echo $post['titulo']; ?>" class="blog-featured__image">
                         </div>
                         <div class="blog-featured__content">
-                            <span class="badge badge--<?php echo $post['badge_color']; ?> mb-15" style="width: max-content; text-transform: uppercase;"><?php echo $post['categoria']; ?></span>
-                            <a href="<?php echo $post['enlace']; ?>" style="text-decoration: none;"><h2 class="blog-featured__title"><?php echo $post['titulo']; ?></h2></a>
+                            <span class="badge badge--<?php echo $post['badge_color']; ?> mb-15 badge-category"><?php echo $post['categoria']; ?></span>
+                            <a href="<?php echo $post['enlace']; ?>" class="no-underline"><h2 class="blog-featured__title"><?php echo $post['titulo']; ?></h2></a>
                             <p class="blog-card__excerpt"><?php echo $post['excerpt']; ?></p>
                             <a href="<?php echo $post['enlace']; ?>" class="link-orange mt-10">Leer artículo completo →</a>
                             <div class="blog-card__meta mt-30">
@@ -89,12 +89,12 @@ $articulos = [
                             if(!$post['destacado']): 
                         ?>
                         <article class="blog-card filter-item" data-category="<?php echo $post['categoria']; ?>">
-                            <a href="<?php echo $post['enlace']; ?>" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+                            <a href="<?php echo $post['enlace']; ?>" class="blog-card-link">
                                 <div class="blog-card__img-wrapper">
                                     <img src="<?php echo $post['imagen']; ?>" alt="<?php echo $post['titulo']; ?>" class="blog-card__image" loading="lazy">
                                 </div>
                                 <div class="blog-card__content">
-                                    <span class="badge badge--<?php echo $post['badge_color']; ?>" style="width: max-content; text-transform: uppercase; margin-bottom: 10px;"><?php echo $post['categoria']; ?></span>
+                                    <span class="badge badge--<?php echo $post['badge_color']; ?> badge-category mb-10"><?php echo $post['categoria']; ?></span>
                                     <h3 class="blog-card__title"><?php echo $post['titulo']; ?></h3>
                                     <p class="blog-card__excerpt"><?php echo $post['excerpt']; ?></p>
                                     <div class="blog-card__meta">
@@ -110,7 +110,7 @@ $articulos = [
                         ?>
                     </div>
                     
-                    <div id="no-results-msg" style="display: none; text-align: center; padding: 40px; color: #a0a0ab; font-weight: 500;">
+                    <div id="no-results-msg" class="no-results-msg">
                         No hay artículos en esta categoría por el momento.
                     </div>
 
@@ -119,9 +119,9 @@ $articulos = [
 
             <div class="cta-banner reveal mt-60 mb-40">
                 <div class="cta-banner__content">
-                    <h2 style="font-family: var(--font-title); font-size: 32px; color: var(--color-white); font-weight: 900; margin-bottom: 15px;">¿Tu hijo necesita aplicar estas estrategias hoy?</h2>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Te ayudamos a transformar la teoría en práctica. Solicita una valoración y descubramos el plan de estudio que su cerebro necesita.</p>
-                    <a href="<?php echo $base_url; ?>contacto.php" class="btn-primary" style="background: var(--color-white); color: var(--color-orange); box-shadow: 0 10px 20px rgba(0,0,0,0.15);">Agendar valoración gratuita</a>
+                    <h2 class="cta-banner__title">¿Tu hijo necesita aplicar estas estrategias hoy?</h2>
+                    <p class="cta-banner__text max-w-600">Te ayudamos a transformar la teoría en práctica. Solicita una valoración y descubramos el plan de estudio que su cerebro necesita.</p>
+                    <a href="<?php echo $base_url; ?>contacto.php" class="btn-primary btn-white-orange">Agendar valoración gratuita</a>
                 </div>
             </div>
         </div>
@@ -142,26 +142,30 @@ $articulos = [
                     let visibleCount = 0;
 
                     filterItems.forEach(item => {
-                        item.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+                        item.classList.add('filter-item-anim');
                         
                         if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = ""; 
+                            item.classList.remove('d-none');
                             setTimeout(() => {
-                                item.style.opacity = "1";
-                                item.style.transform = "scale(1)";
+                                item.classList.remove('filter-fade-out');
                             }, 10);
                             visibleCount++;
                         } else {
-                            item.style.opacity = "0";
-                            item.style.transform = "scale(0.95)";
+                            item.classList.add('filter-fade-out');
                             setTimeout(() => {
-                                item.style.display = "none";
+                                if (item.classList.contains('filter-fade-out')) {
+                                    item.classList.add('d-none');
+                                }
                             }, 300);
                         }
                     });
 
                     setTimeout(() => {
-                        noResultsMsg.style.display = visibleCount === 0 ? "block" : "none";
+                        if (visibleCount === 0) {
+                            noResultsMsg.classList.add('show-msg');
+                        } else {
+                            noResultsMsg.classList.remove('show-msg');
+                        }
                     }, 310);
                 });
             });

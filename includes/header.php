@@ -19,7 +19,15 @@ if (!isset($base_url)) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Red+Hat+Display:wght@300;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="<?php echo $base_url; ?>style.css">
+    <!-- Sistema Modular de CSS -->
+    <link rel="stylesheet" href="<?php echo $base_url; ?>css/1-tokens.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>css/2-base.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>css/3-utilities.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>css/4-layouts.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>css/5-components.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>css/6-pages.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>css/7-animations.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>css/8-responsive.css">
 
     <script type="application/ld+json">
     {
@@ -52,27 +60,6 @@ if (!isset($base_url)) {
     }
     </script>
 
-    <style>
-        .mobile-menu-btn { display: none; background: transparent; border: none; cursor: pointer; padding: 5px; }
-        @media (max-width: 950px) {
-            .mobile-menu-btn { display: block; }
-            .main-nav.nav-open {
-                display: flex !important;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: rgba(245, 245, 247, 0.98);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                padding: 20px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                border-bottom: 1px solid rgba(0,0,0,0.05);
-            }
-            .header-inner { position: relative; }
-        }
-    </style>
 </head>
 <body>
 
@@ -81,9 +68,9 @@ if (!isset($base_url)) {
     <header class="site-header">
         <div class="header-inner">
             <div class="logo">
-                <a href="<?php echo $base_url; ?>index.php" style="text-decoration: none; display: flex; align-items: center; font-family: var(--font-title, 'Red Hat Display', sans-serif); font-size: 24px; letter-spacing: -0.02em;">
-                    <span style="color: var(--color-navy, #1e293b); font-weight: 300;">Centro</span>
-                    <span style="color: #ED7D31; font-weight: 800;">Futura</span>
+                <a href="<?php echo $base_url; ?>index.php" class="logo-link">
+                    <span class="logo-text-navy">Centro</span>
+                    <span class="logo-text-orange">Futura</span>
                 </a>
             </div>
             
@@ -102,7 +89,7 @@ if (!isset($base_url)) {
                 <a href="<?php echo $base_url; ?>contacto.php">Contacto</a>
             </nav>
 
-            <a href="<?php echo $base_url; ?>inscripcion-curso-escolar.php" class="btn-primary btn--small" style="margin-left: 20px;">Reserva tu plaza</a>
+            <a href="<?php echo $base_url; ?>inscripcion-curso-escolar.php" class="btn-primary btn--small ml-20">Reserva tu plaza</a>
 
             <button class="mobile-menu-btn" aria-label="Abrir menú móvil" aria-expanded="false">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

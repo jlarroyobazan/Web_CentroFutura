@@ -72,46 +72,15 @@ $auth_imagen = isset($_POST['auth_imagen']) ? 'SÍ AUTORIZA' : 'NO AUTORIZA';
 $auth_salida = isset($_POST['auth_salida']) ? 'SÍ AUTORIZA' : 'NO AUTORIZA';
 
 $firma_base64 = $_POST['firma_base64'] ?? '';
-$firma_html = $firma_base64 ? "<img src='$firma_base64' style='max-height: 60px; margin-top: 5px;'>" : "<div style='padding:20px; color:#f97316; font-size:10px;'>Firma física pendiente en el centro</div>";
+$firma_html = $firma_base64 ? "<img src='$firma_base64' class='firma-img'>" : "<div class='firma-pending'>Firma física pendiente en el centro</div>";
 
 // 3. ESTRUCTURA HTML & CSS DEL PDF
+$css_pdf = file_get_contents(__DIR__ . '/css/9-pdf.css');
 $html_pdf = "
 <html>
 <head>
 <style>
-    @page { margin: 10mm 15mm; background-color: #ffffff; }
-    body { font-family: 'Helvetica', 'Arial', sans-serif; color: #1e293b; font-size: 9pt; line-height: 1.4; background-color: #ffffff; margin: 0; padding: 0; }
-    
-    .orange { color: #ED7D31; }
-    .navy { color: #1e293b; }
-    .header { width: 100%; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-bottom: 20px; }
-    .badge { background-color: #0f172a; color: #ffffff; padding: 4px 10px; border-radius: 8px; font-size: 8pt; font-weight: bold; }
-    
-    .section-title { font-size: 7.5pt; font-weight: bold; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px; margin: 20px 0 8px 5px; }
-    
-    .bento-container { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; background-color: #ffffff; width: 100%; margin-bottom: 12px; }
-    .bento-cell { padding: 12px 15px; border-bottom: 1px solid #f1f5f9; background-color: #ffffff; }
-    .bento-cell-title { font-weight: bold; font-size: 8.5pt; color: #0f172a; margin-bottom: 2px; }
-    .bento-cell-desc { font-size: 8pt; color: #64748b; line-height: 1.2; }
-    
-    .critical { background-color: #fff7ed; border: 1.2px solid #fdba74; padding: 15px; border-radius: 10px; margin: 12px 0; }
-    
-    .next-steps-box { background-color: #0f172a; color: #ffffff; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 5px solid #ED7D31; }
-    .next-steps-title { color: #ED7D31; font-size: 8.5pt; font-weight: bold; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
-    .next-steps-text { font-size: 8pt; line-height: 1.5; opacity: 0.95; }
-    
-    .signature-box { margin: 0 auto; width: 280px; height: 90px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; text-align: center; }
-    
-    .page-break { page-break-before: always; }
-    .legal-table { width: 100%; border-collapse: collapse; margin-top: 5px; }
-    .legal-td { width: 48%; vertical-align: top; }
-    .legal-spacer { width: 4%; }
-    
-    .legal-card { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; }
-    .legal-card-title { font-size: 7.5pt; font-weight: bold; color: #0f172a; margin-bottom: 4px; text-transform: uppercase; }
-    .legal-card-text { font-size: 6.5pt; color: #475569; line-height: 1.4; text-align: justify; }
-    .num-pill { background-color: #ED7D31; color: white; padding: 1px 5px; border-radius: 4px; font-size: 6pt; margin-right: 4px; display: inline-block; }
-    .num-pill-dark { background-color: #0f172a; color: white; padding: 1px 5px; border-radius: 4px; font-size: 6pt; margin-right: 4px; display: inline-block; }
+$css_pdf
 </style>
 </head>
 <body>
@@ -119,23 +88,23 @@ $html_pdf = "
 <table class='header'>
     <tr>
         <td>
-            <div style=\"font-size: 19pt; letter-spacing: -0.5px;\">
-                <span style=\"color: #1e293b; font-weight: normal;\">Centro</span> <span style=\"color: #ED7D31; font-weight: bold;\">Futura</span>
+            <div class='pdf-logo-container'>
+                <span class='pdf-logo-navy'>Centro</span> <span class='pdf-logo-orange'>Futura</span>
             </div>
         </td>
         <td align='right'>
             <span class='badge'>$id_expediente</span><br>
-            <span style='font-size:7pt; color:#94a3b8; font-weight: bold; margin-top:5px;'>REGISTRO: $fecha_registro</span>
+            <span class='pdf-meta-text'>REGISTRO: $fecha_registro</span>
         </td>
     </tr>
 </table>
 
 <div class='section-title'>1. Datos del Alumno/a</div>
-<div class='bento-container' style='background-color: #f8fafc; border-color: #f1f5f9; margin-bottom: 15px;'>
-    <div class='bento-cell' style='padding: 15px; background-color: #f8fafc;'>
-        <div style='font-size: 18pt; font-weight: bold; color: #0f172a; line-height: 1.1; margin-bottom: 6px;'>$nombre_alumno <span class='orange'>$apellidos_alumno</span></div>
-        <div style='font-size: 9.5pt; color: #64748b; font-weight: bold; letter-spacing: 0.3px;'>
-            $curso_escolar <span class='orange' style='margin: 0 5px;'>|</span> $centro_educativo
+<div class='bento-container bento-container-highlight'>
+    <div class='bento-cell bento-cell-highlight'>
+        <div class='pdf-student-name'>$nombre_alumno <span class='orange'>$apellidos_alumno</span></div>
+        <div class='pdf-student-meta'>
+            $curso_escolar <span class='orange pdf-divider'>|</span> $centro_educativo
         </div>
     </div>
 </div>
@@ -144,7 +113,7 @@ $html_pdf = "
 <div class='bento-container'>
     <table width='100%' cellpadding='0' cellspacing='0'>
         <tr>
-            <td width='50%' class='bento-cell' style='border-right: 1px solid #f1f5f9;'>
+            <td width='50%' class='bento-cell pdf-border-right'>
                 <div class='bento-cell-title'>Tutor/a 1 (Principal)</div>
                 <div class='bento-cell-desc'>$tutor1_nom • $tutor1_tlf</div>
             </td>
@@ -166,7 +135,7 @@ $html_pdf = "
 <div class='bento-container'>
     <table width='100%' cellpadding='0' cellspacing='0'>
         <tr>
-            <td width='50%' class='bento-cell' style='border-right: 1px solid #f1f5f9;'>
+            <td width='50%' class='bento-cell pdf-border-right'>
                 <div class='bento-cell-title'>Horas y Tarifa Mensual</div>
                 <div class='bento-cell-desc'>$horas_semanales</div>
             </td>
@@ -176,7 +145,7 @@ $html_pdf = "
             </td>
         </tr>
         <tr>
-            <td width='50%' class='bento-cell' style='border-right: 1px solid #f1f5f9;'>
+            <td width='50%' class='bento-cell pdf-border-right'>
                 <div class='bento-cell-title'>Asignaturas a reforzar</div>
                 <div class='bento-cell-desc'>$asignaturas</div>
             </td>
@@ -189,20 +158,20 @@ $html_pdf = "
 </div>
 
 <div class='critical'>
-    <div class='orange' style='font-weight:bold; font-size:9pt; margin-bottom:5px;'>Información de Gabinete / NEE</div>
-    <div style='font-size:8pt; font-weight:bold; color:#9a3412; margin-bottom:4px; text-transform: uppercase;'>$nee_display</div>
-    <div style='font-size:8pt; line-height:1.4; color:#431407;'>$ayuda_alumno</div>
+    <div class='orange pdf-critical-title'>Información de Gabinete / NEE</div>
+    <div class='pdf-critical-subtitle'>$nee_display</div>
+    <div class='pdf-critical-text'>$ayuda_alumno</div>
 </div>
 
 <div class='section-title'>4. Autorizaciones Legales Concedidas</div>
 <div class='bento-container'>
     <table width='100%' cellpadding='0' cellspacing='0'>
         <tr>
-            <td width='33.3%' class='bento-cell' style='border-right: 1px solid #f1f5f9;'>
+            <td width='33.3%' class='bento-cell pdf-border-right'>
                 <div class='bento-cell-title'>Uso de WhatsApp</div>
                 <div class='bento-cell-desc'>$auth_whatsapp</div>
             </td>
-            <td width='33.3%' class='bento-cell' style='border-right: 1px solid #f1f5f9;'>
+            <td width='33.3%' class='bento-cell pdf-border-right'>
                 <div class='bento-cell-title'>Derechos de Imagen</div>
                 <div class='bento-cell-desc'>$auth_imagen</div>
             </td>
@@ -225,34 +194,34 @@ $html_pdf = "
 
 <div class='signature-box'>
     $firma_html
-    <div style='font-weight: bold; font-size: 7.5pt; color: #0f172a; margin-top: 5px;'>Firma del Tutor/a Legal</div>
+    <div class='pdf-signature-label'>Firma del Tutor/a Legal</div>
 </div>
-<div style='text-align: center; font-size: 6.5pt; color: #94a3b8; margin-top: 5px;'>
+<div class='pdf-signature-meta'>
     Firma capturada electrónicamente. IP: $ip_firma.
 </div>
 
 <div class='page-break'></div>
 
-<table class='header' style='margin-bottom: 10px;'>
+<table class='header mb-10'>
     <tr>
         <td>
-            <div style=\"font-size: 15pt; letter-spacing: -0.5px;\">
-                <span style=\"color: #1e293b; font-weight: normal;\">Centro</span> <span style=\"color: #ED7D31; font-weight: bold;\">Futura</span>
+            <div class='pdf-logo-container-sm'>
+                <span class='pdf-logo-navy'>Centro</span> <span class='pdf-logo-orange'>Futura</span>
             </div>
         </td>
         <td align='right'>
-            <div style='font-weight:bold; font-size:9pt; color:#0f172a;'>CONTRATO DE SERVICIOS</div>
-            <div style='font-size:7pt; color:#94a3b8;'>Anexo a: $id_expediente</div>
+            <div class='pdf-contract-title'>CONTRATO DE SERVICIOS</div>
+            <div class='pdf-contract-meta'>Anexo a: $id_expediente</div>
         </td>
     </tr>
 </table>
 
-<div style='font-size: 11pt; font-weight: bold; color: #0f172a; margin-bottom: 15px;'>Condiciones Generales y Reglamento Interno</div>
+<div class='pdf-contract-header'>Condiciones Generales y Reglamento Interno</div>
 
 <table class='legal-table'>
     <tr>
         <td class='legal-td'>
-            <div class='legal-card' style='border-left: 3px solid #ED7D31;'>
+            <div class='legal-card pdf-card-border-orange'>
                 <div class='legal-card-title'><span class='num-pill'>01</span> Régimen Económico</div>
                 <div class='legal-card-text'>
                     <strong>1.1. Devengo y Pago:</strong> El servicio se contrata por periodos mensuales. El pago se realizará entre los días 1 y 5 de cada mes. El retraso generará un recargo de 10€ a partir del día 10.<br>
@@ -333,14 +302,14 @@ $html_pdf = "
                 </div>
             </div>
 
-            <div class='legal-card' style='border-left: 3px solid #0f172a;'>
+            <div class='legal-card pdf-card-border-navy'>
                 <div class='legal-card-title'><span class='num-pill'>13</span> Protección de Datos (RGPD)</div>
                 <div class='legal-card-text'>
                     Datos tratados por Ainhoa Moreno (70427872D) para el servicio formativo. El centro cuenta con videovigilancia sin grabación en aulas. Ejerza sus derechos en hola@centrofutura.es.
                 </div>
             </div>
 
-            <div style='margin-top:12px; border: 1px dashed #cbd5e1; background: #ffffff; padding:10px; border-radius: 8px; font-weight:bold; color:#0f172a; font-size: 6.5pt; text-align: center;'>
+            <div class='pdf-contract-footer'>
                 Mediante la firma electrónica en la página 1, el tutor/a legal acepta en su totalidad las cláusulas de este contrato vinculante. Condiciones disponibles en centrofutura.es
             </div>
         </td>

@@ -34,7 +34,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly">Aprox. 12,50€ / sesión</div>
                                 <p class="pricing-desc">Refuerzo puntual para resolver dudas, revisar deberes y reforzar una asignatura.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10 mt-auto w-100 text-center">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card">
@@ -45,7 +45,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly">Aprox. 10,00€ / sesión</div>
                                 <p class="pricing-desc">Apoyo semanal para reforzar contenidos, mejorar hábitos de estudio y preparar exámenes.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10 mt-auto w-100 text-center">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card card-featured border-orange">
@@ -57,7 +57,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly">Aprox. 9,15€ / sesión</div>
                                 <p class="pricing-desc">Refuerzo continuo en varias materias con seguimiento del progreso académico.</p>
-                                <a href="index.php#contacto" class="btn-primary mt-10" style="margin-top: auto; width: 100%; text-align: center;">Quiero este plan</a>
+                                <a href="index.php#contacto" class="btn-primary mt-10 mt-auto w-100 text-center">Quiero este plan</a>
                             </div>
 
                             <div class="pricing-card card-featured border-orange">
@@ -69,7 +69,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly">Aprox. 8,75€ / sesión</div>
                                 <p class="pricing-desc">Apoyo más completo para mejorar resultados y consolidar las asignaturas principales.</p>
-                                <a href="index.php#contacto" class="btn-primary mt-10" style="margin-top: auto; width: 100%; text-align: center;">Quiero este plan</a>
+                                <a href="index.php#contacto" class="btn-primary mt-10 mt-auto w-100 text-center">Quiero este plan</a>
                             </div>
 
                             <div class="pricing-card">
@@ -80,7 +80,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="pricing-hourly">Aprox. 8,50€ / sesión</div>
                                 <p class="pricing-desc">Programa intensivo para alumnos que necesitan reforzar varias materias cada semana.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10 mt-auto w-100 text-center">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card">
@@ -89,9 +89,9 @@ include 'includes/header.php';
                                 <div class="pricing-price">
                                     <span>€</span>200<span>/ Mes</span>
                                 </div>
-                                <div class="pricing-hourly text-orange" style="font-weight: 700;">Aprox. 8,33€ / sesión • Mayor ahorro</div>
+                                <div class="pricing-hourly text-orange font-bold">Aprox. 8,33€ / sesión • Mayor ahorro</div>
                                 <p class="pricing-desc">Refuerzo académico intensivo con preparación de exámenes y apoyo constante.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10 mt-auto w-100 text-center">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card">
@@ -100,9 +100,9 @@ include 'includes/header.php';
                                 <div class="pricing-price">
                                     <span>€</span>230<span>/ Mes</span>
                                 </div>
-                                <div class="pricing-hourly text-orange" style="font-weight: 700;">Aprox. 8,20€ / sesión • Mayor ahorro</div>
+                                <div class="pricing-hourly text-orange font-bold">Aprox. 8,20€ / sesión • Mayor ahorro</div>
                                 <p class="pricing-desc">Apoyo semanal avanzado para mejorar rendimiento y recuperar asignaturas pendientes.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10 mt-auto w-100 text-center">Solicitar información</a>
                             </div>
 
                             <div class="pricing-card">
@@ -111,35 +111,35 @@ include 'includes/header.php';
                                 <div class="pricing-price">
                                     <span>€</span>260<span>/ Mes</span>
                                 </div>
-                                <div class="pricing-hourly text-orange" style="font-weight: 700;">Aprox. 8,12€ / sesión • Mejor precio</div>
+                                <div class="pricing-hourly text-orange font-bold">Aprox. 8,12€ / sesión • Mejor precio</div>
                                 <p class="pricing-desc">Plan completo de refuerzo para alumnos que necesitan apoyo académico continuo.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center;">Solicitar información</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10 mt-auto w-100 text-center">Solicitar información</a>
                             </div>
 
-                            <div class="pricing-card" style="background: var(--bg-icon-blue); border-color: transparent;">
-                                <span class="pricing-category-label" style="color: #2d82b5;">A tu medida</span>
+                            <div class="pricing-card bg-light-blue border-none">
+                                <span class="pricing-category-label text-blue">A tu medida</span>
                                 <h3>Plan Hermanos / Personal</h3>
-                                <div class="pricing-price" style="font-size: 32px; margin-top: 10px;">
+                                <div class="pricing-price text-32 mt-10">
                                     Consultar
                                 </div>
-                                <div class="pricing-hourly" style="color: #2d82b5;">Descuentos familiares</div>
-                                <p class="pricing-desc" style="color: #2d82b5;">¿Necesitáis más horas, combinar apoyo con gabinete o un bono familiar? Diseñamos una cuota exclusiva.</p>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; width: 100%; text-align: center; border-color: #2d82b5; color: #2d82b5;">Hablar con dirección</a>
+                                <div class="pricing-hourly text-blue">Descuentos familiares</div>
+                                <p class="pricing-desc text-blue">¿Necesitáis más horas, combinar apoyo con gabinete o un bono familiar? Diseñamos una cuota exclusiva.</p>
+                                <a href="index.php#contacto" class="btn-ghost mt-10 mt-auto w-100 text-center btn-outline-blue">Hablar con dirección</a>
                             </div>
                         </div>
 
                         <div class="pau-banner mt-60">
                             <div class="pau-banner__content">
                                 <div>
-                                    <span class="pricing-category-label" style="color: var(--color-orange); background: white; display: inline-block; padding: 4px 12px; border-radius: 100px; margin-bottom: 10px;">Preparación Universitaria</span>
+                                    <span class="pricing-category-label pau-badge">Preparación Universitaria</span>
                                     <h3>Curso Intensivo EvAU (PAU) - 10 horas</h3>
                                     <p>Preparación estratégica enfocada 100% en superar el examen y alcanzar la nota de corte deseada.</p>
                                 </div>
                                 <div class="pau-banner__action">
-                                    <div class="pricing-price" style="color: white; margin-bottom: 5px;">
-                                        <span style="color: rgba(255,255,255,0.8);">€</span>120<span style="color: rgba(255,255,255,0.8);">/ Curso</span>
+                                    <div class="pricing-price text-white mb-5">
+                                        <span class="text-white-80">€</span>120<span class="text-white-80">/ Curso</span>
                                     </div>
-                                    <a href="index.php#contacto" class="btn-primary pau-btn" style="background: white; color: var(--color-orange); width: 100%;">Reservar plaza PAU</a>
+                                    <a href="index.php#contacto" class="btn-primary pau-btn btn-white-orange w-100">Reservar plaza PAU</a>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +159,7 @@ include 'includes/header.php';
                                     <li>Detección de estilo de aprendizaje.</li>
                                     <li>Diseño de plan de intervención.</li>
                                 </ul>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; border-color: var(--color-purple); color: var(--color-purple);">Agendar entrevista inicial</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10 mt-auto btn-outline-purple">Agendar entrevista inicial</a>
                             </div>
 
                             <div class="pricing-card card-featured border-purple">
@@ -175,7 +175,7 @@ include 'includes/header.php';
                                     <li>Entrenamiento de funciones ejecutivas.</li>
                                     <li>Pautas para replicar en casa.</li>
                                 </ul>
-                                <a href="index.php#contacto" class="btn-primary mt-10" style="margin-top: auto; background: linear-gradient(135deg, var(--color-purple), #a259c3); box-shadow: 0 8px 20px rgba(142,68,173,0.3);">Reservar horario</a>
+                                <a href="index.php#contacto" class="btn-primary mt-10 mt-auto btn-primary-purple">Reservar horario</a>
                             </div>
 
                             <div class="pricing-card">
@@ -190,7 +190,7 @@ include 'includes/header.php';
                                     <li>Mantenimiento de rutinas creadas.</li>
                                     <li>Gestión del estrés pre-exámenes.</li>
                                 </ul>
-                                <a href="index.php#contacto" class="btn-ghost mt-10" style="margin-top: auto; border-color: var(--color-purple); color: var(--color-purple);">Solicitar plaza</a>
+                                <a href="index.php#contacto" class="btn-ghost mt-10 mt-auto btn-outline-purple">Solicitar plaza</a>
                             </div>
 
                         </div>
@@ -200,7 +200,7 @@ include 'includes/header.php';
 
             <div class="content-island content-island--light reveal">
                 <section class="island-section text-center">
-                    <h2 class="section-title mb-40" style="font-size: 28px;">Todos los planes de apoyo <span class="text-orange">incluyen:</span></h2>
+                    <h2 class="section-title mb-40 text-28">Todos los planes de apoyo <span class="text-orange">incluyen:</span></h2>
                     <div class="value-bar-grid">
                         <div class="value-item">
                             <div class="value-icon" aria-hidden="true">🆓</div>
@@ -228,12 +228,12 @@ include 'includes/header.php';
 
             <div class="content-island reveal">
                 <section class="island-section text-center">
-                    <figure class="testimonial-focus" style="margin: 0;">
+                    <figure class="testimonial-focus m-0">
                         <div class="stars mb-15" aria-label="5 de 5 estrellas">⭐⭐⭐⭐⭐</div>
-                        <blockquote class="mb-20" style="font-family: var(--font-title); font-size: 22px; color: var(--color-navy); max-width: 700px; margin: 0 auto; line-height: 1.4;">
+                        <blockquote class="mb-20 testimonial-quote-lg">
                             "Dudábamos si apuntarle 4 horas semanales, pero verle aprobar y recuperar la confianza en sí mismo hace que cada euro invertido valga la pena. La mejor decisión académica."
                         </blockquote>
-                        <figcaption class="text-orange mt-20" style="font-weight: 700; display: block;">— Carlos M., padre de alumno de 3º ESO</figcaption>
+                        <figcaption class="text-orange mt-20 font-bold block">— Carlos M., padre de alumno de 3º ESO</figcaption>
                     </figure>
                 </section>
             </div>
@@ -275,9 +275,9 @@ include 'includes/header.php';
 
             <div class="cta-banner reveal mt-60 mb-40">
                 <div class="cta-banner__content">
-                    <h2 style="font-family: var(--font-title); font-size: 32px; color: var(--color-white); font-weight: 900; margin-bottom: 15px;">¿No estás seguro de cuántas horas necesita?</h2>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Reserva una entrevista inicial gratuita. Evaluaremos su situación, sus últimos resultados y te recomendaremos el plan exacto sin compromiso.</p>
-                    <a href="index.php#contacto" class="btn-primary" style="background: var(--color-white); color: var(--color-orange); box-shadow: 0 10px 20px rgba(0,0,0,0.15);">Solicitar entrevista gratuita</a>
+                    <h2 class="cta-banner__title">¿No estás seguro de cuántas horas necesita?</h2>
+                    <p class="cta-banner__text max-w-600">Reserva una entrevista inicial gratuita. Evaluaremos su situación, sus últimos resultados y te recomendaremos el plan exacto sin compromiso.</p>
+                    <a href="index.php#contacto" class="btn-primary btn-white-orange">Solicitar entrevista gratuita</a>
                 </div>
             </div>
 

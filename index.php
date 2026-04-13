@@ -7,27 +7,6 @@ $pageDescription = "Especialistas en apoyo escolar, gabinete psicopedagógico (T
 include 'includes/header.php'; 
 ?>
 
-    <style>
-        .form-grid-mobile { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 15px; }
-        
-        @media (max-width: 768px) {
-            /* Ajustes de tipografía fluida para evitar títulos rotos */
-            .hero-premium__title { font-size: clamp(32px, 8vw, 42px) !important; line-height: 1.15; }
-            .section-title { font-size: clamp(26px, 7vw, 32px) !important; line-height: 1.2; }
-            
-            /* Reducción de espacios muertos en móvil */
-            .mt-80 { margin-top: 45px !important; }
-            .mb-50 { margin-bottom: 30px !important; }
-            .island-section { padding: 40px 20px !important; }
-            .seo-block { padding-top: 40px !important; }
-            
-            /* Reestructuración de elementos para que no se aplasten */
-            .contact-premium-wrapper { grid-template-columns: 1fr !important; gap: 40px !important; }
-            .hero-premium__actions { flex-direction: column; align-items: flex-start; gap: 20px; }
-            .form-grid-mobile { grid-template-columns: 1fr !important; } /* Fuerza los campos a 1 columna en móvil */
-        }
-    </style>
-
     <main>
         
         <section class="hero-premium hero-full-bleed reveal">
@@ -35,7 +14,7 @@ include 'includes/header.php';
                 
                 <div class="hero-premium__content">
                     <div class="mb-20 stagger-1">
-                        <span class="badge badge--orange" style="display: inline-flex; align-items: center; gap: 8px; padding-left: 12px;">
+                        <span class="badge badge--orange badge--with-icon">
                             <span class="pulse-dot" aria-hidden="true"></span>
                             Atención personalizada - Máx. 6 alumnos
                         </span>
@@ -59,9 +38,9 @@ include 'includes/header.php';
                                     <div>🧠</div>
                                     <div>⭐</div>
                                 </div>
-                                <div style="display: flex; flex-direction: column;">
-                                    <span style="font-family: var(--font-title); font-size: 15px; font-weight: 800; color: var(--color-navy); line-height: 1.2;">+95% aprobados</span>
-                                    <span style="font-size: 12px; font-weight: 500; color: var(--color-text);">Método comprobado</span>
+                                <div class="trust-text-stack">
+                                    <span class="trust-text-title">+95% aprobados</span>
+                                    <span class="trust-text-subtitle">Método comprobado</span>
                                 </div>
                             </div>
                             <a href="#contacto" class="btn-ghost btn--small">Reservar clase de prueba →</a>
@@ -81,8 +60,8 @@ include 'includes/header.php';
                         <div class="hero-premium__floating-rating stagger-pop-1">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Logotipo de opiniones de Google" width="28" height="28">
                             <div>
-                                <div style="font-family: var(--font-title); font-weight: 800; font-size: 20px; color: var(--color-navy); line-height: 1;" aria-label="4.9 estrellas de 5">4.9/5</div>
-                                <div style="font-size: 13px; color: var(--color-text); font-weight: 700;">80 opiniones</div>
+                                <div class="rating-score" aria-label="4.9 estrellas de 5">4.9/5</div>
+                                <div class="rating-text">80 opiniones</div>
                             </div>
                         </div>
 
@@ -184,9 +163,9 @@ include 'includes/header.php';
                 <section class="island-section mt-80 reveal">
                     <div class="cta-banner">
                         <div class="cta-banner__content">
-                            <h2 style="font-family: var(--font-title); font-size: 36px; font-weight: 800; color: white; margin-bottom: 15px;">Transforma el "No puedo" en "Lo he logrado"</h2>
-                            <p style="font-size: 18px; color: rgba(255,255,255,0.9); margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Deja que nuestros especialistas evalúen el caso de tu hijo sin ningún compromiso. Diseñaremos un plan a su medida para que vuelva a creer en sus capacidades.</p>
-                            <a href="#contacto" class="btn-primary" style="background: white; color: var(--color-orange); box-shadow: 0 10px 25px rgba(0,0,0,0.1);">Solicitar orientación hoy</a>
+                            <h2 class="cta-banner__title">Transforma el "No puedo" en "Lo he logrado"</h2>
+                            <p class="cta-banner__text">Deja que nuestros especialistas evalúen el caso de tu hijo sin ningún compromiso. Diseñaremos un plan a su medida para que vuelva a creer en sus capacidades.</p>
+                            <a href="#contacto" class="btn-primary btn-white-orange">Solicitar orientación hoy</a>
                         </div>
                     </div>
                 </section>
@@ -297,7 +276,7 @@ include 'includes/header.php';
 
                     <div class="nee-protocol mt-80">
                         <div class="text-center mb-50">
-                            <h3 style="font-family: var(--font-title); font-size: 32px; color: var(--color-navy); font-weight: 800;">El Triángulo del Éxito <span class="text-purple">Futura</span></h3>
+                            <h3 class="nee-protocol-title">El Triángulo del Éxito <span class="text-purple">Futura</span></h3>
                             <p class="section-description mt-10">La intervención en NEE solo funciona cuando todos remamos en la misma dirección.</p>
                         </div>
                         <div class="protocol-grid">
@@ -321,11 +300,11 @@ include 'includes/header.php';
                 </section>
             </div>
 
-            <div class="content-island content-island--dark reveal" style="background-color: var(--color-navy); padding-top: 80px; padding-bottom: 80px;">
+            <div class="content-island content-island--dark bg-navy py-80 reveal">
                 <section class="counters island-section text-center">
                     <span class="badge badge--orange mb-15">NUESTRO IMPACTO</span>
-                    <h2 class="section-title mb-10" style="color: var(--color-white);">Datos que avalan tu <span class="text-orange">tranquilidad</span></h2>
-                    <p class="section-description mx-auto max-w-600 mb-50" style="color: #b8b8c5;">La excelencia no se promete, se demuestra con trayectoria y dedicación diaria.</p>
+                    <h2 class="section-title mb-10 text-white">Datos que avalan tu <span class="text-orange">tranquilidad</span></h2>
+                    <p class="section-description mx-auto max-w-600 mb-50 text-light-gray">La excelencia no se promete, se demuestra con trayectoria y dedicación diaria.</p>
                     
                     <div class="counters__grid">
                         <div class="counter-item glass-dark">
@@ -376,7 +355,7 @@ include 'includes/header.php';
                         </figure>
                         <figure class="testimonial__card google-review">
                             <div class="google-review__header">
-                                <div class="google-review__avatar" style="background: var(--color-orange);" aria-hidden="true">C</div>
+                            <div class="google-review__avatar bg-orange" aria-hidden="true">C</div>
                                 <figcaption class="google-review__info">
                                     <strong>Carlos P.</strong>
                                     <span class="google-review__date">Hace 4 meses</span>
@@ -388,7 +367,7 @@ include 'includes/header.php';
                         </figure>
                         <figure class="testimonial__card google-review">
                             <div class="google-review__header">
-                                <div class="google-review__avatar" style="background: var(--color-purple);" aria-hidden="true">S</div>
+                                <div class="google-review__avatar bg-purple" aria-hidden="true">S</div>
                                 <figcaption class="google-review__info">
                                     <strong>Sara L.</strong>
                                     <span class="google-review__date">Hace 5 meses</span>
@@ -400,29 +379,29 @@ include 'includes/header.php';
                         </figure>
                     </div>
                     <div class="text-center mt-50">
-                        <a href="https://www.google.com/search?q=Centro+Futura+Avenida+Pablo+Iglesias+89+Rivas#lrd=0x0:0x0,1,,," target="_blank" rel="noopener noreferrer" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 10px;">
+                        <a href="https://www.google.com/search?q=Centro+Futura+Avenida+Pablo+Iglesias+89+Rivas#lrd=0x0:0x0,1,,," target="_blank" rel="noopener noreferrer" class="btn-ghost btn-icon">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" width="18" height="18" aria-hidden="true">
                             Leer todas las opiniones reales
                         </a>
                     </div>
                 </section>
                 
-                <section class="seo-block island-section mt-80 reveal" style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 60px;">
+                <section class="seo-block island-section mt-80 seo-section reveal">
                     <div class="max-w-900 mx-auto text-center">
                         <span class="badge badge--orange mb-15">13 AÑOS LIDERANDO RIVAS</span>
                         <h2 class="section-title">Referentes en <span class="text-orange">Apoyo Escolar y NEE</span> en Rivas Vaciamadrid</h2>
                         
-                        <p class="section-description mt-20" style="font-size: 18px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        <p class="section-description mt-20 mx-auto max-w-800 text-18">
                             En Centro Futura llevamos más de <strong>una década</strong> demostrando que una educación a medida es la llave del éxito. 
                             Nuestra academia en Rivas Futura no es un centro de estudios convencional; es un espacio integral donde el rendimiento académico y el bienestar emocional van de la mano.
                         </p>
 
-                        <div class="mt-50 text-left glass-effect" style="border-radius: var(--radius-lg); background: var(--bg-body); padding: 40px; border: 1px solid rgba(0,0,0,0.04); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: center; text-align: center;">
-                            <div class="icon-bg-purple mb-20" aria-hidden="true" style="width: 60px; height: 60px; font-size: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">🧠</div>
-                            <h3 class="navy mb-15" style="font-family: var(--font-title); font-weight: 800; font-size: 24px; color: var(--color-navy);">Pioneros en Gabinete Psicopedagógico</h3>
-                            <p class="gray" style="font-size: 16px; line-height: 1.8; color: var(--color-text); max-width: 700px; margin-bottom: 0;">
+                        <div class="mt-50 seo-highlight-card glass-effect">
+                            <div class="icon-bg-purple seo-highlight-card__icon mb-20" aria-hidden="true">🧠</div>
+                            <h3 class="seo-highlight-card__title mb-15">Pioneros en Gabinete Psicopedagógico</h3>
+                            <p class="seo-highlight-card__text">
                                 A diferencia de otras academias de barrio, contamos con un <strong>gabinete propio hiper-especializado</strong> para atender retos como el 
-                                <span class="text-orange" style="font-weight: 700;">TDAH, la Dislexia, el TEA o las Altas Capacidades</span>. Blindamos el futuro de tu hijo diseñando estrategias que encajan con su neurobiología.
+                                <span class="text-orange font-bold">TDAH, la Dislexia, el TEA o las Altas Capacidades</span>. Blindamos el futuro de tu hijo diseñando estrategias que encajan con su neurobiología.
                             </p>
                         </div>
                     </div>
@@ -535,20 +514,20 @@ include 'includes/header.php';
                                     </div>
 
                                     <div class="input-group floating-label-group">
-                                        <textarea id="mensaje" name="mensaje" placeholder=" " rows="3" required aria-required="true" style="resize: vertical; min-height: 80px;"></textarea>
+                                        <textarea id="mensaje" name="mensaje" placeholder=" " rows="3" required aria-required="true" class="textarea-sm"></textarea>
                                         <label for="mensaje">Cuéntanos brevemente tu caso...</label>
                                     </div>
 
-                                    <div style="margin-top: 15px; margin-bottom: 20px;">
-                                        <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 13px; color: var(--color-text);">
-                                            <input type="checkbox" name="acepta_privacidad" required style="width: 18px; height: 18px; accent-color: var(--color-orange); margin-top: 2px;">
+                                <div class="mt-15 mb-20">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="acepta_privacidad" required>
                                             <span>He leído y acepto la <a href="politica-de-privacidad.php" target="_blank" class="link-orange">política de privacidad</a>. *</span>
                                         </label>
                                     </div>
             
                                     <button type="submit" class="btn-primary btn-submit mt-10">
                                         Enviar consulta
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ml-8" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                                     </button>
                                     <p class="form-disclaimer">Tus datos están protegidos y solo los usamos para responderte.</p>
                                 </form>
